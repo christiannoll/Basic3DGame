@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc8inpmgj57ne"]
+[gd_scene load_steps=8 format=3 uid="uid://bc8inpmgj57ne"]
 
+[ext_resource type="PackedScene" uid="uid://b611342n8rhyw" path="res://Scenes/ui.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://cd3tju67xah55" path="res://Scenes/player.tscn" id="1_tumq0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
@@ -21,6 +22,8 @@ glow_enabled = true
 
 [node name="level" type="Node3D"]
 
+[node name="UI" parent="." instance=ExtResource("1_k5f4k")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k5f4k")
 
@@ -29,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.70710
 shadow_enabled = true
 
 [node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 0, 0)
+transform = Transform3D(42.629066, 0, 0, 0, 1, 0, 0, 0, 69.39393, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 shape = SubResource("BoxShape3D_51e2h")

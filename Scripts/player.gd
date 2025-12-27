@@ -1,9 +1,29 @@
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+var ORIGINAL_SPEED
+var SPEED = 3.0
+var SPRINT_SPEED = 7.0
 const JUMP_VELOCITY = 4.5
+var sprint_slider
+var sprint_drain_amount = 0.1
+var sprint_refresh_amount = 0.1
 
+func _ready() -> void:
+	ORIGINAL_SPEED = SPEED
+	sprint_slider = get_node("/root/" + get_tree().current_scene.name + "/UI/sprint_slider")
+
+func _process(delta: float) -> void:
+	if SPEED == SPRINT_SPEED:
+		sprint_slider.value = sprint_slider.value - sprint_drain_amount * delta
+		if sprint_slider.value == sprint_slider.min_value:
+			SPEED = ORIGINAL_SPEED
+	if SPEED != SPRINT_SPEED:
+		if sprint_slider.value < sprint_slider.max_value:
+			sprint_slider.value = sprint_slider.value + sprint_refresh_amount * delta
+		if sprint_slider.value == sprint_slider.max_value:
+			sprint_slider.visible = false
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -21,6 +41,11 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
+		if Input.is_action_just_pressed("sprint"):
+			sprint_slider.visible = true
+			SPEED = SPRINT_SPEED
+		if Input.is_action_just_released("sprint"):
+			SPEED = ORIGINAL_SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)

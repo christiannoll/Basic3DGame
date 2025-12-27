@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://b611342n8rhyw"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_wviqb"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2266.0
+offset_bottom = 1078.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="sprint_slider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 187.0
+offset_top = 468.0
+offset_right = 957.0
+offset_bottom = 630.0
+theme_override_icons/grabber = SubResource("ImageTexture_wviqb")
+max_value = 1.0
+step = 0.0
+value = 1.0
