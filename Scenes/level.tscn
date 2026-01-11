@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc8inpmgj57ne"]
+[gd_scene load_steps=11 format=3 uid="uid://bc8inpmgj57ne"]
 
 [ext_resource type="PackedScene" uid="uid://b611342n8rhyw" path="res://Scenes/ui.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://cd3tju67xah55" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="Material" uid="uid://bnxvyht4twwum" path="res://Materials/wall.tres" id="2_6phgx"]
 [ext_resource type="Material" uid="uid://dxvaw0qc8u2rd" path="res://Materials/floor.tres" id="2_81xng"]
+[ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="4_wqkje"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -120,7 +121,7 @@ transform = Transform3D(40.811478, 0.00052372506, 0, -0.004273784, 5.0011873, 0,
 shape = SubResource("BoxShape3D_51e2h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wall5"]
-material_override = ExtResource("2_6phgx")
+material_override = ExtResource("4_wqkje")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="wall10" type="StaticBody3D" parent="."]
@@ -130,7 +131,7 @@ transform = Transform3D(40.811478, 0.00052372506, 0, -0.004273784, 5.0011873, 0,
 shape = SubResource("BoxShape3D_51e2h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wall10"]
-material_override = ExtResource("2_6phgx")
+material_override = ExtResource("4_wqkje")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="wall7" type="StaticBody3D" parent="."]
@@ -170,7 +171,7 @@ transform = Transform3D(2.2483954, -0.040391963, 0, 0.018051662, 5.030955, 0, 0,
 shape = SubResource("BoxShape3D_51e2h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wall8"]
-material_override = ExtResource("2_6phgx")
+material_override = ExtResource("4_wqkje")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="wall9" type="StaticBody3D" parent="."]
@@ -180,7 +181,7 @@ transform = Transform3D(2.2483954, -0.040391963, 0, 0.018051662, 5.030955, 0, 0,
 shape = SubResource("BoxShape3D_51e2h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="wall9"]
-material_override = ExtResource("2_6phgx")
+material_override = ExtResource("4_wqkje")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="wall3" type="StaticBody3D" parent="."]
