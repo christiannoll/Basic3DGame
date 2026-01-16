@@ -227,3 +227,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.567356, 5.658647, 0.1783723
 
 [node name="light2" parent="." instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3313465, 5.658647, 26.021145)
+
+[node name="light3" parent="." instance=ExtResource("6_0f350")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.318588, 5.52642, -0.97686195)
