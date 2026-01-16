@@ -222,11 +222,13 @@ mesh = SubResource("BoxMesh_tumq0")
 [node name="Player" parent="." instance=ExtResource("1_tumq0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4745345, 1.5, -28.98865)
 
-[node name="light" parent="." instance=ExtResource("6_0f350")]
+[node name="lights" type="Node3D" parent="."]
+
+[node name="light" parent="lights" instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.567356, 5.658647, 0.17837238)
 
-[node name="light2" parent="." instance=ExtResource("6_0f350")]
+[node name="light2" parent="lights" instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3313465, 5.658647, 26.021145)
 
-[node name="light3" parent="." instance=ExtResource("6_0f350")]
+[node name="light3" parent="lights" instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.318588, 5.52642, -0.97686195)
