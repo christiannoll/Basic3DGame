@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjl3jv6rvfu2h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qod8c"]
+size = Vector3(1, 0.82092285, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ix8et"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4ppvu"]
+radial_segments = 16
+
+[node name="Table" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.96967936, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12286342, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(2.3800328, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12384034, 0)
+shape = SubResource("BoxShape3D_qod8c")
+
+[node name="table_top" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.3802602, 0, 0, 0, 0.31094152, 0, 0, 0, 1, 0, 0.48896235, 0)
+mesh = SubResource("BoxMesh_ix8et")
+
+[node name="table_leg" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.345, 0, 0, 0, 0.1, -1.0325423, 0.16509505, 0.3424803)
+mesh = SubResource("CylinderMesh_4ppvu")
+
+[node name="table_leg2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.345, 0, 0, 0, 0.1, -1.0325423, 0.16509505, -0.3421163)
+mesh = SubResource("CylinderMesh_4ppvu")
+
+[node name="table_leg3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.345, 0, 0, 0, 0.1, 1.082178, 0.16509505, -0.34653288)
+mesh = SubResource("CylinderMesh_4ppvu")
+
+[node name="table_leg4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.345, 0, 0, 0, 0.1, 1.082178, 0.16509505, 0.34966713)
+mesh = SubResource("CylinderMesh_4ppvu")
