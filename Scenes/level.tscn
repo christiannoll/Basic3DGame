@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bc8inpmgj57ne"]
+[gd_scene load_steps=13 format=3 uid="uid://bc8inpmgj57ne"]
 
 [ext_resource type="PackedScene" uid="uid://b611342n8rhyw" path="res://Scenes/ui.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://cd3tju67xah55" path="res://Scenes/player.tscn" id="1_tumq0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://dxvaw0qc8u2rd" path="res://Materials/floor.tres" id="2_81xng"]
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="4_wqkje"]
 [ext_resource type="PackedScene" uid="uid://hpfjta44rurm" path="res://Scenes/light.tscn" id="6_0f350"]
+[ext_resource type="PackedScene" uid="uid://bjl3jv6rvfu2h" path="res://Scenes/table.tscn" id="7_8c0lf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -49,13 +50,13 @@ shape = SubResource("BoxShape3D_51e2h")
 material_override = ExtResource("2_81xng")
 mesh = SubResource("BoxMesh_tumq0")
 
-[node name="floor2" type="StaticBody3D" parent="floors_and_walls"]
+[node name="ceiling" type="StaticBody3D" parent="floors_and_walls"]
 transform = Transform3D(42.629066, 0, 0, 0, 1, 0, 0, 0, 69.39393, 0, 6.0947495, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floors_and_walls/floor2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floors_and_walls/ceiling"]
 shape = SubResource("BoxShape3D_51e2h")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floors_and_walls/floor2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floors_and_walls/ceiling"]
 material_override = ExtResource("2_81xng")
 mesh = SubResource("BoxMesh_tumq0")
 
@@ -232,3 +233,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3313465, 5.658647, 26.0211
 
 [node name="light3" parent="lights" instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.318588, 5.52642, -0.97686195)
+
+[node name="Table" parent="." instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7947067, -30.559624)
