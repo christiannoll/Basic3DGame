@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://doiinythr3dgv"]
+
+[ext_resource type="Material" uid="uid://y2ekeshc8i08" path="res://Materials/flashlight_top.tres" id="1_5higp"]
+[ext_resource type="Material" uid="uid://cuo1j7epavklg" path="res://Materials/flashlight.tres" id="1_ocaxa"]
+[ext_resource type="Script" uid="uid://do8aookss0ccb" path="res://Scripts/pickup_flashlight.gd" id="1_x32u1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_b0acp"]
+radial_segments = 14
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ocaxa"]
+size = Vector3(1, 1, 2.3110962)
+
+[node name="Flashlight" type="StaticBody3D" unique_id=360502918]
+script = ExtResource("1_x32u1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2063911446]
+transform = Transform3D(0.5, 0, 0, 0, -4.371139e-08, -0.5, 0, 1, -2.1855694e-08, 0, 0, 0)
+material_override = ExtResource("1_ocaxa")
+mesh = SubResource("CylinderMesh_b0acp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=434943040]
+transform = Transform3D(1, 0, 0, 0, -7.2740245e-09, -1, 0, 0.16641028, -4.371139e-08, 0, 0, -1.1069654)
+material_override = ExtResource("1_ocaxa")
+mesh = SubResource("CylinderMesh_b0acp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=311355221]
+transform = Transform3D(0.9075503, 0, 0, 0, -1.2602935e-09, -0.82430273, 0, 0.028832156, -3.6031416e-08, 0, 0, -1.267246)
+material_override = ExtResource("1_5higp")
+mesh = SubResource("CylinderMesh_b0acp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2074301421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13980955)
+shape = SubResource("BoxShape3D_ocaxa")
