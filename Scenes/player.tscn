@@ -31,3 +31,6 @@ script = ExtResource("3_6t5aa")
 
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=1293798301]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.325)
+
+[node name="RayCast3D" type="RayCast3D" parent="head" unique_id=1451804484]
+transform = Transform3D(1.64, 0, 0, 0, -7.168668e-08, -1.64, 0, 1.64, -7.168668e-08, -0.375, 0, 0)
