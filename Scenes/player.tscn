@@ -26,6 +26,7 @@ script = ExtResource("2_cvnsp")
 
 [node name="flashlight" type="SpotLight3D" parent="head" unique_id=1136222521]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02269882, -0.53628415)
+visible = false
 spot_range = 15.0
 spot_angle = 25.0
 script = ExtResource("3_6t5aa")
