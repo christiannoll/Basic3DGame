@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dcp8xocw3hx2a" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://dmpepy5ak3nxf" path="res://Scripts/camera.gd" id="2_cvnsp"]
 [ext_resource type="Script" uid="uid://cjfu2ol6d78b2" path="res://Scripts/flashlight.gd" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://b883dua0g08l8" path="res://Sounds/flashlight_on.mp3" id="4_fkybt"]
 [ext_resource type="Script" uid="uid://cql0o7x0tnuuc" path="res://Scripts/raycast.gd" id="4_vgqql"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
@@ -30,6 +31,9 @@ visible = false
 spot_range = 15.0
 spot_angle = 25.0
 script = ExtResource("3_6t5aa")
+
+[node name="toggle" type="AudioStreamPlayer" parent="head/flashlight" unique_id=1540765618]
+stream = ExtResource("4_fkybt")
 
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=1293798301]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.325)
