@@ -223,7 +223,7 @@ material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="Player" parent="." unique_id=1211612180 instance=ExtResource("1_tumq0")]
-transform = Transform3D(0.005305818, 0, -0.99998593, 0, 1, 0, 0.99998593, 0, 0.005305818, -3.8026655, 1.5, -30.29963)
+transform = Transform3D(0.005305818, 0, -0.99998593, 0, 1, 0, 0.99998593, 0, 0.005305818, -5.9862366, 1.5, -30.29963)
 
 [node name="lights" type="Node3D" parent="." unique_id=1863057904]
 
@@ -240,10 +240,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.318588, 5.52642, -0.976861
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8916702, 5.52642, -28.468962)
 
 [node name="Table" parent="." unique_id=404156894 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7947067, -30.559624)
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7460078, -30.559624)
 
 [node name="Flashlight" parent="." unique_id=360502918 instance=ExtResource("8_754fn")]
-transform = Transform3D(-0.19945674, 0, -0.014731198, 0, 0.2, 0, 0.014731198, 0, -0.19945674, -0.5731386, 1.528923, -30.949368)
+transform = Transform3D(-0.19945674, 0, -0.014731198, 0, 0.2, 0, 0.014731198, 0, -0.19945674, -0.5731386, 1.4606438, -30.949368)
 
 [node name="ambience_sounds" type="Node3D" parent="." unique_id=133983811]
 
@@ -273,3 +273,9 @@ stream = ExtResource("9_bvt00")
 pitch_scale = 0.4
 autoplay = true
 max_distance = 60.0
+
+[node name="beginning_cutscene" type="Node3D" parent="." unique_id=1633004939]
+
+[node name="Camera3D" type="Camera3D" parent="beginning_cutscene" unique_id=1691070056]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.3856316, 0.85665464, -33.445534)
+far = 50.0
