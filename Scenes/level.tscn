@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bjl3jv6rvfu2h" path="res://Scenes/table.tscn" id="7_8c0lf"]
 [ext_resource type="PackedScene" uid="uid://doiinythr3dgv" path="res://Scenes/flashlight.tscn" id="8_754fn"]
 [ext_resource type="AudioStream" uid="uid://benodiijv6apk" path="res://Sounds/ambience.mp3" id="9_bvt00"]
+[ext_resource type="Script" uid="uid://bpbx6f8xpnoel" path="res://Scripts/beginning_cutscene.gd" id="10_oqgf2"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,7 +30,7 @@ glow_enabled = true
 [sub_resource type="BoxMesh" id="BoxMesh_tumq0"]
 
 [sub_resource type="Animation" id="Animation_oqgf2"]
-length = 8.1
+length = 8.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -336,6 +337,7 @@ autoplay = true
 max_distance = 60.0
 
 [node name="beginning_cutscene" type="Node3D" parent="." unique_id=1633004939]
+script = ExtResource("10_oqgf2")
 
 [node name="cutscene_cam" type="Camera3D" parent="beginning_cutscene" unique_id=1691070056]
 transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, -4.3856316, 0.85665464, -33.445534)
