@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://7hbvoevlg62r"]
+
+[ext_resource type="Material" uid="uid://btvu5orxx5jht" path="res://Materials/table.tres" id="1_w6aom"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p0e35"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fahql"]
+
+[node name="Door" type="Node3D" unique_id=1436056146]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1406073392]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=847196367]
+transform = Transform3D(1.0247338, 0, 0, 0, 1.7556714, 0, 0, 0, 0.1879897, 0, 0, -0.102282465)
+shape = SubResource("BoxShape3D_p0e35")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=284665982]
+transform = Transform3D(1, 0, 0, 0, 1.764904, 0, 0, 0, 0.13535476, 0, 0, -0.11277056)
+material_override = ExtResource("1_w6aom")
+mesh = SubResource("BoxMesh_fahql")
