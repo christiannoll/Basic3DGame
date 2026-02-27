@@ -23,13 +23,13 @@ material_override = ExtResource("1_w6aom")
 mesh = SubResource("BoxMesh_fahql")
 
 [node name="handle" type="MeshInstance3D" parent="StaticBody3D" unique_id=676894479]
-transform = Transform3D(0.11908087, 0, 0, 0, -9.706083e-09, -0.124842055, 0, 0.22204928, -5.4570193e-09, 0.34789866, 0, -0.108198464)
+transform = Transform3D(0.11908087, 0, 0, 0, -9.706083e-09, -0.124842055, 0, 0.22204928, -5.4570193e-09, -0.36231893, 0, -0.108198464)
 mesh = SubResource("CylinderMesh_w6aom")
 
 [node name="knob_1" type="MeshInstance3D" parent="StaticBody3D" unique_id=604945688]
-transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, 0.34789866, 0, -0.3379659)
+transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, -0.36231893, 0, -0.3379659)
 mesh = SubResource("CylinderMesh_w6aom")
 
 [node name="knob_2" type="MeshInstance3D" parent="StaticBody3D" unique_id=337295709]
-transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, 0.34789866, 0, 0.108714074)
+transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, -0.36231893, 0, 0.108714074)
 mesh = SubResource("CylinderMesh_w6aom")
