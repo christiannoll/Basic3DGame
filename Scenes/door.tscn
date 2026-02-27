@@ -11,25 +11,29 @@ radial_segments = 16
 
 [node name="Door" type="Node3D" unique_id=1436056146]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1406073392]
+[node name="hinge" type="Node3D" parent="." unique_id=210770214]
+transform = Transform3D(0.9992508, 0, -0.038701735, 0, 1, 0, 0.038701735, 0, 0.9992508, 0.46135497, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=847196367]
+[node name="StaticBody3D" type="StaticBody3D" parent="hinge" unique_id=1406073392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46135497, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=847196367]
 transform = Transform3D(1.0247338, 0, 0, 0, 1.7556714, 0, 0, 0, 0.1879897, 0, 0, -0.102282465)
 shape = SubResource("BoxShape3D_p0e35")
 
-[node name="door_base" type="MeshInstance3D" parent="StaticBody3D" unique_id=284665982]
+[node name="door_base" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=284665982]
 transform = Transform3D(1, 0, 0, 0, 1.764904, 0, 0, 0, 0.13535476, 0, 0, -0.11277056)
 material_override = ExtResource("1_w6aom")
 mesh = SubResource("BoxMesh_fahql")
 
-[node name="handle" type="MeshInstance3D" parent="StaticBody3D" unique_id=676894479]
+[node name="handle" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=676894479]
 transform = Transform3D(0.11908087, 0, 0, 0, -9.706083e-09, -0.124842055, 0, 0.22204928, -5.4570193e-09, -0.36231893, 0, -0.108198464)
 mesh = SubResource("CylinderMesh_w6aom")
 
-[node name="knob_1" type="MeshInstance3D" parent="StaticBody3D" unique_id=604945688]
+[node name="knob_1" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=604945688]
 transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, -0.36231893, 0, -0.3379659)
 mesh = SubResource("CylinderMesh_w6aom")
 
-[node name="knob_2" type="MeshInstance3D" parent="StaticBody3D" unique_id=337295709]
+[node name="knob_2" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=337295709]
 transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, -0.36231893, 0, 0.108714074)
 mesh = SubResource("CylinderMesh_w6aom")
