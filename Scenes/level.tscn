@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://bnxvyht4twwum" path="res://Materials/wall.tres" id="2_6phgx"]
 [ext_resource type="Material" uid="uid://dxvaw0qc8u2rd" path="res://Materials/floor.tres" id="2_81xng"]
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="4_wqkje"]
+[ext_resource type="PackedScene" uid="uid://7hbvoevlg62r" path="res://Scenes/door.tscn" id="5_qxfql"]
 [ext_resource type="PackedScene" uid="uid://hpfjta44rurm" path="res://Scenes/light.tscn" id="6_0f350"]
 [ext_resource type="PackedScene" uid="uid://bjl3jv6rvfu2h" path="res://Scenes/table.tscn" id="7_8c0lf"]
 [ext_resource type="PackedScene" uid="uid://doiinythr3dgv" path="res://Scenes/flashlight.tscn" id="8_754fn"]
@@ -283,6 +284,9 @@ shape = SubResource("BoxShape3D_51e2h")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floors_and_walls/wall4" unique_id=1263666963]
 material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_tumq0")
+
+[node name="Door" parent="floors_and_walls" unique_id=1436056146 instance=ExtResource("5_qxfql")]
+transform = Transform3D(1.1725936, 0, 0, 0, 1.241059, 0, 0, 0, 1, -4.9573717, 1.382452, -24.326761)
 
 [node name="Player" parent="." unique_id=1211612180 instance=ExtResource("1_tumq0")]
 transform = Transform3D(0.005305818, 0, -0.99998593, 0, 1, 0, 0.99998593, 0, 0.005305818, -5.9862366, 1.5, -30.29963)

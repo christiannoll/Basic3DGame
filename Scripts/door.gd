@@ -8,9 +8,9 @@ func interact():
 		interactable = false
 		opened = !opened
 		if opened == false:
-			$AnimationPlayer.play("open")
-		else:
 			$AnimationPlayer.play("close")
+		else:
+			$AnimationPlayer.play("open")
 		await get_tree().create_timer(1.0, false).timeout
 		interactable = true
 		
