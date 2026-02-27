@@ -9,10 +9,46 @@
 [sub_resource type="CylinderMesh" id="CylinderMesh_w6aom"]
 radial_segments = 16
 
+[sub_resource type="Animation" id="Animation_p0e35"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_w6aom"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0e35"]
+_data = {
+&"RESET": SubResource("Animation_p0e35"),
+&"open": SubResource("Animation_w6aom")
+}
+
 [node name="Door" type="Node3D" unique_id=1436056146]
 
 [node name="hinge" type="Node3D" parent="." unique_id=210770214]
-transform = Transform3D(0.9992508, 0, -0.038701735, 0, 1, 0, 0.038701735, 0, 0.9992508, 0.46135497, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46135497, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hinge" unique_id=1406073392]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46135497, 0, 0)
@@ -37,3 +73,6 @@ mesh = SubResource("CylinderMesh_w6aom")
 [node name="knob_2" type="MeshInstance3D" parent="hinge/StaticBody3D" unique_id=337295709]
 transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, -0.36231893, 0, 0.108714074)
 mesh = SubResource("CylinderMesh_w6aom")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1019732510]
+libraries/ = SubResource("AnimationLibrary_p0e35")
