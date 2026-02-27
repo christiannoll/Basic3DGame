@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://7hbvoevlg62r"]
 
+[ext_resource type="Script" uid="uid://cjoqu1udsytp6" path="res://Scripts/door.gd" id="1_p0e35"]
 [ext_resource type="Material" uid="uid://btvu5orxx5jht" path="res://Materials/table.tres" id="1_w6aom"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p0e35"]
@@ -68,6 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46135497, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="hinge" unique_id=1406073392]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46135497, 0, 0)
+script = ExtResource("1_p0e35")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=847196367]
 transform = Transform3D(1.0247338, 0, 0, 0, 1.7556714, 0, 0, 0, 0.1879897, 0, 0, -0.102282465)
@@ -90,5 +92,6 @@ mesh = SubResource("CylinderMesh_w6aom")
 transform = Transform3D(0.14318211, 0, 0, 0, -2.215062e-09, -0.15781091, 0, 0.050674707, -6.898134e-09, -0.36231893, 0, 0.108714074)
 mesh = SubResource("CylinderMesh_w6aom")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1019732510]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hinge/StaticBody3D" unique_id=1019732510]
+root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_p0e35")
