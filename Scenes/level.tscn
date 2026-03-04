@@ -140,7 +140,7 @@ material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="wall6" type="StaticBody3D" parent="floors_and_walls" unique_id=688726306]
-transform = Transform3D(9.999678, -0.04014214, 0, 0.08028428, 4.999839, 0, 0, 0, 10, 2.3136358, 3.0780916, -19.89098)
+transform = Transform3D(9.999678, -0.04014214, 0, 0.08028428, 4.999839, 0, 0, 0, 10, 2.314, 3.078, -19.82)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floors_and_walls/wall6" unique_id=1513914316]
 shape = SubResource("BoxShape3D_51e2h")
@@ -317,7 +317,7 @@ material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_ha31o")
 
 [node name="door_wall3" type="StaticBody3D" parent="floors_and_walls" unique_id=1137062926]
-transform = Transform3D(2.4815805, 0, 0, 0, 0.90366083, 0, 0, 0, 0.29062498, -5.2275906, 4.690916, -24.794931)
+transform = Transform3D(2.481, 0, 0, 0, 0.8662859, 0, 0, 0, 0.291, -5.2275906, 4.67281, -24.794931)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floors_and_walls/door_wall3" unique_id=462198660]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
