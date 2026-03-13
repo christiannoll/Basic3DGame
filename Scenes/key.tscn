@@ -8,6 +8,8 @@ radial_segments = 14
 
 [sub_resource type="BoxMesh" id="BoxMesh_ut0wq"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ut0wq"]
+
 [node name="key" type="StaticBody3D" unique_id=896870246]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=9763134]
@@ -29,3 +31,7 @@ mesh = SubResource("BoxMesh_ut0wq")
 transform = Transform3D(0.12746131, 0, 0, 0, 0.07991403, 0, 0, 0, 0.22451115, 1.1802973, 0, -0.21402836)
 material_override = ExtResource("1_ut0wq")
 mesh = SubResource("BoxMesh_ut0wq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2026648927]
+transform = Transform3D(2.189033, 0, 0, 0, 0.3998495, 0, 0, 0, 1, 0.56957203, 0, 0)
+shape = SubResource("BoxShape3D_ut0wq")
