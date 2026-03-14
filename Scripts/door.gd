@@ -4,7 +4,9 @@ var interactable = true
 var opened = false
 
 func interact():
-	if interactable == true:
+	if get_parent().get_parent().locked == true && get_parent().get_parent().key == null:
+		get_parent().get_parent().locked = false
+	if interactable == true && get_parent().get_parent().locked == false:
 		interactable = false
 		opened = !opened
 		if opened == false:
