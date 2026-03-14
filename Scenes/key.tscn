@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://6taomu4iqpr2"]
 
+[ext_resource type="Script" uid="uid://d1niu8dav3330" path="res://Scripts/pickup_key.gd" id="1_udxw8"]
 [ext_resource type="Material" uid="uid://lre0so5n8c6h" path="res://Materials/key.tres" id="1_ut0wq"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_hla8l"]
@@ -11,6 +12,7 @@ radial_segments = 14
 [sub_resource type="BoxShape3D" id="BoxShape3D_ut0wq"]
 
 [node name="key" type="StaticBody3D" unique_id=896870246]
+script = ExtResource("1_udxw8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=9763134]
 transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
