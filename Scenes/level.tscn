@@ -290,8 +290,9 @@ shape = SubResource("BoxShape3D_51e2h")
 material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_tumq0")
 
-[node name="Door" parent="floors_and_walls" unique_id=1436056146 instance=ExtResource("5_qxfql")]
+[node name="Door" parent="floors_and_walls" unique_id=1436056146 node_paths=PackedStringArray("key") instance=ExtResource("5_qxfql")]
 transform = Transform3D(1.5503582, 0, 0, 0, 1.9053168, 0, 0, 0, 1, -5.0121865, 2.1685038, -24.616615)
+key = NodePath("../../key")
 locked = true
 
 [node name="door_wall" type="StaticBody3D" parent="floors_and_walls" unique_id=773190426]
