@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://doiinythr3dgv" path="res://Scenes/flashlight.tscn" id="8_754fn"]
 [ext_resource type="AudioStream" uid="uid://benodiijv6apk" path="res://Sounds/ambience.mp3" id="9_bvt00"]
 [ext_resource type="Script" uid="uid://bpbx6f8xpnoel" path="res://Scripts/beginning_cutscene.gd" id="10_oqgf2"]
+[ext_resource type="PackedScene" uid="uid://6taomu4iqpr2" path="res://Scenes/key.tscn" id="12_ha31o"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -393,3 +394,6 @@ far = 50.0
 
 [node name="cutscene_anim_player" type="AnimationPlayer" parent="beginning_cutscene" unique_id=161880632]
 libraries/ = SubResource("AnimationLibrary_oqgf2")
+
+[node name="key" parent="." unique_id=896870246 instance=ExtResource("12_ha31o")]
+transform = Transform3D(2.3849762e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, 2.3849762e-09, -7.7753897, 1.3797538, -30.207865)
