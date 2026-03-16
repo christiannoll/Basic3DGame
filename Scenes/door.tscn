@@ -41,6 +41,22 @@ tracks/0/keys = {
 "values": [Vector3(0, 1.5707964, 0), Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_ab4ky"]
+resource_name = "locked"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.034906585, 0), Vector3(0, 0.034906585, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_w6aom"]
 resource_name = "open"
 tracks/0/type = "value"
@@ -60,6 +76,7 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_p0e35"),
 &"close": SubResource("Animation_fahql"),
+&"locked": SubResource("Animation_ab4ky"),
 &"open": SubResource("Animation_w6aom")
 }
 
