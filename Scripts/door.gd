@@ -15,4 +15,10 @@ func interact():
 			$AnimationPlayer.play("open")
 		await get_tree().create_timer(1.0, false).timeout
 		interactable = true
+	if interactable == true && get_parent().get_parent().locked == true:
+		interactable = false
+		$AnimationPlayer.play("locked")
+		await get_tree().create_timer(0.7, false).timeout
+		interactable = true
+		
 		
