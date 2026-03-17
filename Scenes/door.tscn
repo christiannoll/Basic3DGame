@@ -93,6 +93,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46135497, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46135497, 0, 0)
 script = ExtResource("1_p0e35")
 
+[node name="open" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D" unique_id=240648082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008922517, 0, 0)
+stream = ExtResource("4_a43ba")
+max_distance = 15.0
+
+[node name="close" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D" unique_id=1240503501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008922517, 0, 0)
+stream = ExtResource("5_burcv")
+max_distance = 15.0
+
+[node name="locked" type="AudioStreamPlayer3D" parent="hinge/StaticBody3D" unique_id=793740588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008922517, 0, 0)
+stream = ExtResource("6_burcv")
+max_distance = 15.0
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hinge/StaticBody3D" unique_id=847196367]
 transform = Transform3D(1.0247338, 0, 0, 0, 1.7556714, 0, 0, 0, 0.1879897, 0, 0, -0.102282465)
 shape = SubResource("BoxShape3D_p0e35")
@@ -117,18 +132,3 @@ mesh = SubResource("CylinderMesh_w6aom")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="hinge/StaticBody3D" unique_id=1019732510]
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_p0e35")
-
-[node name="open" type="AudioStreamPlayer3D" parent="hinge" unique_id=240648082]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45243245, 0, 0)
-stream = ExtResource("4_a43ba")
-max_distance = 15.0
-
-[node name="close" type="AudioStreamPlayer3D" parent="hinge" unique_id=1240503501]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45243245, 0, 0)
-stream = ExtResource("5_burcv")
-max_distance = 15.0
-
-[node name="locked" type="AudioStreamPlayer3D" parent="hinge" unique_id=793740588]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45243245, 0, 0)
-stream = ExtResource("6_burcv")
-max_distance = 15.0
