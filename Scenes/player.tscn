@@ -41,5 +41,6 @@ stream = ExtResource("4_fkybt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.325)
 
 [node name="RayCast3D" type="RayCast3D" parent="head" unique_id=1451804484]
-transform = Transform3D(1.64, 0, 0, 0, -7.168668e-08, -1.64, 0, 1.64, -7.168668e-08, -0.375, 0, 0)
+transform = Transform3D(1.6400002, -1.4901161e-08, 0, 0, -7.168668e-08, -1.64, 1.4901161e-08, 1.6400002, -7.1686685e-08, -0.029459149, 0, -0.04886402)
+target_position = Vector3(0, -2, 0)
 script = ExtResource("4_vgqql")
