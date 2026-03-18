@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://benodiijv6apk" path="res://Sounds/ambience.mp3" id="9_bvt00"]
 [ext_resource type="Script" uid="uid://bpbx6f8xpnoel" path="res://Scripts/beginning_cutscene.gd" id="10_oqgf2"]
 [ext_resource type="PackedScene" uid="uid://6taomu4iqpr2" path="res://Scenes/key.tscn" id="12_ha31o"]
+[ext_resource type="AudioStream" uid="uid://d1lk0elv1r6s2" path="res://Sounds/key_pickup.mp3" id="13_crh0w"]
+[ext_resource type="AudioStream" uid="uid://dc5lnuu5x20dm" path="res://Sounds/obj_pickup.mp3" id="14_c7le1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -398,3 +400,9 @@ libraries/ = SubResource("AnimationLibrary_oqgf2")
 
 [node name="key" parent="." unique_id=896870246 instance=ExtResource("12_ha31o")]
 transform = Transform3D(2.3849762e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, 2.3849762e-09, -7.7753897, 1.3797538, -30.207865)
+
+[node name="keys_pickup" type="AudioStreamPlayer" parent="." unique_id=701219161]
+stream = ExtResource("13_crh0w")
+
+[node name="obj_pickup" type="AudioStreamPlayer" parent="." unique_id=1317169248]
+stream = ExtResource("14_c7le1")
