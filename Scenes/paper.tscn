@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://cgxekkkgpngpx"]
 
+[ext_resource type="Script" uid="uid://o1f4ygkqqbir" path="res://Scripts/paper.gd" id="1_thabk"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_4urcx"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4urcx"]
 
 [node name="Paper" type="StaticBody3D" unique_id=915373991]
+script = ExtResource("1_thabk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=435335830]
 transform = Transform3D(0.6370346, 0, 0, 0, 0.21064562, 0, 0, 0, 1, 0, 0.0759708, 0)
