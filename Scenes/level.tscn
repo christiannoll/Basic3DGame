@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://6taomu4iqpr2" path="res://Scenes/key.tscn" id="12_ha31o"]
 [ext_resource type="AudioStream" uid="uid://d1lk0elv1r6s2" path="res://Sounds/key_pickup.mp3" id="13_crh0w"]
 [ext_resource type="AudioStream" uid="uid://dc5lnuu5x20dm" path="res://Sounds/obj_pickup.mp3" id="14_c7le1"]
+[ext_resource type="PackedScene" uid="uid://cgxekkkgpngpx" path="res://Scenes/paper.tscn" id="15_c7le1"]
+[ext_resource type="Material" uid="uid://cvhx718x38lrp" path="res://Materials/paper.tres" id="16_2klc5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -406,3 +408,7 @@ stream = ExtResource("13_crh0w")
 
 [node name="obj_pickup" type="AudioStreamPlayer" parent="." unique_id=1317169248]
 stream = ExtResource("14_c7le1")
+
+[node name="Paper" parent="." unique_id=915373991 instance=ExtResource("15_c7le1")]
+transform = Transform3D(0.02924761, 0, 0.67119646, 0, 1, 0, -0.67014885, 0, 0.029293332, -7.8390207, 1.3832471, -31.026125)
+paper_material = ExtResource("16_2klc5")
