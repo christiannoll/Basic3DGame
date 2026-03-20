@@ -5,3 +5,7 @@ var toggle = false
 
 func _ready() -> void:
 	$MeshInstance3D.material_override = paper_material
+	
+func interact():
+	toggle = !toggle
+	
