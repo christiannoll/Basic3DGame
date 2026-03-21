@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cgxekkkgpngpx"]
 
 [ext_resource type="Script" uid="uid://o1f4ygkqqbir" path="res://Scripts/paper.gd" id="1_thabk"]
+[ext_resource type="AudioStream" uid="uid://cxybjj53845v3" path="res://Sounds/paper-pickup.mp3" id="2_c7gsp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4urcx"]
 
@@ -16,3 +17,6 @@ shape = SubResource("BoxShape3D_4urcx")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=37256766]
 transform = Transform3D(0.62283844, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_4urcx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=61648719]
+stream = ExtResource("2_c7gsp")

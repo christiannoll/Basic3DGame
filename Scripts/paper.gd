@@ -9,6 +9,7 @@ func _ready() -> void:
 	
 func interact():
 	toggle = !toggle
+	$AudioStreamPlayer.play()
 	get_node("/root/" + get_tree().current_scene.name + "/UI/paper").texture = paper_ui_texture
 	get_node("/root/" + get_tree().current_scene.name + "/UI/paper").visible = toggle
 	get_node("/root/" + get_tree().current_scene.name + "/Player").movable = !toggle
