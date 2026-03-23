@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b5l23eioeobp3"]
 
+[ext_resource type="Texture2D" uid="uid://bgjuufdlfkpgs" path="res://Texturtes/game_logo.png" id="1_28flt"]
+
 [node name="Main_menu" type="Control" unique_id=1065365922]
 layout_mode = 3
 anchors_preset = 15
@@ -14,7 +16,11 @@ offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=325066956]
+[node name="game_logo" type="TextureRect" parent="." unique_id=325066956]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 366.0
+offset_top = -28.0
+offset_right = 791.0
+offset_bottom = 323.0
+texture = ExtResource("1_28flt")
+expand_mode = 3
