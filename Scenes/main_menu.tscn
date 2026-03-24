@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5l23eioeobp3"]
 
 [ext_resource type="Texture2D" uid="uid://bgjuufdlfkpgs" path="res://Texturtes/game_logo.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://bkdr3j5iertn3" path="res://Scripts/main_menu.gd" id="1_48xlc"]
 
 [node name="Main_menu" type="Control" unique_id=1065365922]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_48xlc")
 
 [node name="background" type="ColorRect" parent="." unique_id=2116149042]
 layout_mode = 0
@@ -60,3 +62,6 @@ offset_right = 667.0
 offset_bottom = 567.0
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
+
+[connection signal="pressed" from="Button" to="." method="play"]
+[connection signal="pressed" from="Button4" to="." method="quit"]
