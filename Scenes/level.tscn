@@ -102,6 +102,8 @@ _data = {
 &"beginning": SubResource("Animation_oqgf2")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vofx3"]
+
 [node name="level" type="Node3D" unique_id=524820426]
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
@@ -425,3 +427,8 @@ paper_material = ExtResource("2_6phgx")
 paper_ui_texture = ExtResource("18_vofx3")
 
 [node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666]
+transform = Transform3D(2.3927803, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, -11.172412, -0.07784295, -1.76968)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger" unique_id=1908091641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
+shape = SubResource("BoxShape3D_vofx3")
