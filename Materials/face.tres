@@ -3,4 +3,5 @@
 [ext_resource type="Texture2D" uid="uid://c1s7wecsnio2c" path="res://Texturtes/scary_mask.png" id="1_4g6xe"]
 
 [resource]
+transparency = 1
 albedo_texture = ExtResource("1_4g6xe")
