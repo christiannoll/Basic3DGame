@@ -436,7 +436,12 @@ transform = Transform3D(2.3927803, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, -11.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
 
-[node name="face" type="MeshInstance3D" parent="." unique_id=386656303]
+[node name="scare" type="Node3D" parent="." unique_id=1526226374]
+
+[node name="face" type="MeshInstance3D" parent="scare" unique_id=386656303]
 transform = Transform3D(0.8877704, -0.6618901, -0.05566104, 0.8189003, 0.70994663, 0.15665543, -0.057612516, -0.10815159, 1.3689902, -9.917976, 1.7986286, -11.600448)
 material_override = ExtResource("19_00k4y")
 mesh = SubResource("QuadMesh_vofx3")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scare" unique_id=1372790576]
