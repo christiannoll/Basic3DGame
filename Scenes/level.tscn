@@ -515,9 +515,11 @@ transform = Transform3D(0.6697513, 0, -0.03731557, 0, 1, 0, 0.037257325, 0, 0.67
 paper_material = ExtResource("2_6phgx")
 paper_ui_texture = ExtResource("18_vofx3")
 
-[node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666]
+[node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666 node_paths=PackedStringArray("animationPlayer")]
 transform = Transform3D(2.3927803, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, -11.172412, -0.07784295, -1.76968)
 script = ExtResource("19_3a44l")
+animationPlayer = NodePath("../scare/AnimationPlayer")
+anim_name = "peek"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger" unique_id=1908091641]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
