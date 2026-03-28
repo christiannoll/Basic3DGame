@@ -535,3 +535,5 @@ skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scare" unique_id=1372790576]
 libraries/ = SubResource("AnimationLibrary_3a44l")
+
+[connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
