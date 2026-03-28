@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://detjwqdqeeakc" path="res://icon.svg" id="17_nngtn"]
 [ext_resource type="Texture2D" uid="uid://bkcyxr0m3i1ui" path="res://Texturtes/wall_texture.png" id="18_vofx3"]
 [ext_resource type="Material" uid="uid://b8dwf15jqhdaq" path="res://Materials/face.tres" id="19_00k4y"]
+[ext_resource type="Script" uid="uid://dlwf8mw0p8x7v" path="res://Scripts/scare_trigger.gd" id="19_3a44l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -516,6 +517,7 @@ paper_ui_texture = ExtResource("18_vofx3")
 
 [node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666]
 transform = Transform3D(2.3927803, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, -11.172412, -0.07784295, -1.76968)
+script = ExtResource("19_3a44l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger" unique_id=1908091641]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
