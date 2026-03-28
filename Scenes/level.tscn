@@ -107,11 +107,63 @@ _data = {
 
 [sub_resource type="QuadMesh" id="QuadMesh_vofx3"]
 
+[sub_resource type="Animation" id="Animation_3a44l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("face:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.447445, 2.132523, -11.600448)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("face:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.11384254, -0.040636066, 0.7500333)]
+}
+
 [sub_resource type="Animation" id="Animation_00k4y"]
 resource_name = "peek"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("face:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-9.447445, 2.132523, -11.600448)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("face:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.11384254, -0.040636066, 0.7500333)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3a44l"]
 _data = {
+&"RESET": SubResource("Animation_3a44l"),
 &"peek": SubResource("Animation_00k4y")
 }
 
@@ -447,7 +499,7 @@ shape = SubResource("BoxShape3D_vofx3")
 [node name="scare" type="Node3D" parent="." unique_id=1526226374]
 
 [node name="face" type="MeshInstance3D" parent="scare" unique_id=386656303]
-transform = Transform3D(0.8877704, -0.6618901, -0.05566104, 0.8189003, 0.70994663, 0.15665543, -0.057612516, -0.10815159, 1.3689902, -9.917976, 2.132523, -11.600448)
+transform = Transform3D(0.8877703, -0.6618901, -0.05566101, 0.8189003, 0.70994663, 0.15665542, -0.05761252, -0.10815159, 1.3689902, -9.447445, 2.132523, -11.600448)
 material_override = ExtResource("19_00k4y")
 mesh = SubResource("QuadMesh_vofx3")
 skeleton = NodePath("../..")
