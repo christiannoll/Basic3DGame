@@ -107,6 +107,14 @@ _data = {
 
 [sub_resource type="QuadMesh" id="QuadMesh_vofx3"]
 
+[sub_resource type="Animation" id="Animation_00k4y"]
+resource_name = "peek"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3a44l"]
+_data = {
+&"peek": SubResource("Animation_00k4y")
+}
+
 [node name="level" type="Node3D" unique_id=524820426]
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
@@ -439,9 +447,10 @@ shape = SubResource("BoxShape3D_vofx3")
 [node name="scare" type="Node3D" parent="." unique_id=1526226374]
 
 [node name="face" type="MeshInstance3D" parent="scare" unique_id=386656303]
-transform = Transform3D(0.8877704, -0.6618901, -0.05566104, 0.8189003, 0.70994663, 0.15665543, -0.057612516, -0.10815159, 1.3689902, -9.917976, 1.7986286, -11.600448)
+transform = Transform3D(0.8877704, -0.6618901, -0.05566104, 0.8189003, 0.70994663, 0.15665543, -0.057612516, -0.10815159, 1.3689902, -9.917976, 2.132523, -11.600448)
 material_override = ExtResource("19_00k4y")
 mesh = SubResource("QuadMesh_vofx3")
 skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scare" unique_id=1372790576]
+libraries/ = SubResource("AnimationLibrary_3a44l")
