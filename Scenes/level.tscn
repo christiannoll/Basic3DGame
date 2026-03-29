@@ -549,9 +549,14 @@ skeleton = NodePath("../..")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scare" unique_id=1372790576]
 libraries/ = SubResource("AnimationLibrary_3a44l")
 
-[node name="character" type="MeshInstance3D" parent="." unique_id=1729641063]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6986852, 1.6162806, -12.837128)
+[node name="scare2" type="Node3D" parent="." unique_id=2066438]
+
+[node name="character" type="MeshInstance3D" parent="scare2" unique_id=1729641063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4527502, 1.6162806, -12.837128)
 mesh = SubResource("CapsuleMesh_3a44l")
+skeleton = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scare2" unique_id=913448422]
 
 [connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="scare_trigger2" to="scare_trigger2" method="trigger_entered"]
