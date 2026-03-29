@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bkcyxr0m3i1ui" path="res://Texturtes/wall_texture.png" id="18_vofx3"]
 [ext_resource type="Material" uid="uid://b8dwf15jqhdaq" path="res://Materials/face.tres" id="19_00k4y"]
 [ext_resource type="Script" uid="uid://dlwf8mw0p8x7v" path="res://Scripts/scare_trigger.gd" id="19_3a44l"]
+[ext_resource type="AudioStream" uid="uid://cudvrghhug2qa" path="res://Sounds/sudden-scare.mp3" id="21_0cmrb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -578,21 +579,23 @@ transform = Transform3D(0.6697513, 0, -0.03731557, 0, 1, 0, 0.037257325, 0, 0.67
 paper_material = ExtResource("2_6phgx")
 paper_ui_texture = ExtResource("18_vofx3")
 
-[node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666 node_paths=PackedStringArray("animationPlayer")]
+[node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
 transform = Transform3D(2.3927803, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, -11.172412, -0.07784295, -1.76968)
 script = ExtResource("19_3a44l")
 animationPlayer = NodePath("../scare/AnimationPlayer")
 anim_name = "peek"
+scare_sound = NodePath("../scare_sound")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger" unique_id=1908091641]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
 
-[node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer")]
+[node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
 transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -9.4519615)
 script = ExtResource("19_3a44l")
 animationPlayer = NodePath("../scare2/AnimationPlayer")
 anim_name = "run"
+scare_sound = NodePath("../scare_sound")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger2" unique_id=1769468586]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
@@ -619,6 +622,9 @@ skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scare2" unique_id=531386937]
 libraries/ = SubResource("AnimationLibrary_24uko")
+
+[node name="scare_sound" type="AudioStreamPlayer" parent="." unique_id=1854649723]
+stream = ExtResource("21_0cmrb")
 
 [connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="scare_trigger2" to="scare_trigger2" method="trigger_entered"]
