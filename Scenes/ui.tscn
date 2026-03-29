@@ -33,7 +33,7 @@ offset_left = 20.0
 offset_top = 16.0
 offset_right = 275.0
 offset_bottom = 101.0
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 20
 text = "[E] Interact"
 
 [node name="paper" type="TextureRect" parent="." unique_id=253885253]
