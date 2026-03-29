@@ -525,6 +525,16 @@ anim_name = "peek"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
 
+[node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer")]
+transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.07784295, -1.557251)
+script = ExtResource("19_3a44l")
+animationPlayer = NodePath("../scare/AnimationPlayer")
+anim_name = "peek"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger2" unique_id=1769468586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
+shape = SubResource("BoxShape3D_vofx3")
+
 [node name="scare" type="Node3D" parent="." unique_id=1526226374]
 
 [node name="face" type="MeshInstance3D" parent="scare" unique_id=386656303]
@@ -537,3 +547,4 @@ skeleton = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_3a44l")
 
 [connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
+[connection signal="body_entered" from="scare_trigger2" to="scare_trigger2" method="trigger_entered"]
