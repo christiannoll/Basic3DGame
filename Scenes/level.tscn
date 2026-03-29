@@ -196,7 +196,35 @@ _data = {
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3a44l"]
 radial_segments = 24
 
+[sub_resource type="Animation" id="Animation_0cmrb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.40533876, 1.6162806, 0.62418175)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("character:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_pnhnk"]
+resource_name = "run"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -204,34 +232,7 @@ tracks/0/path = NodePath("character:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("character:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.40533876, 1.6162806, -12.373571)]
-}
-
-[sub_resource type="Animation" id="Animation_0cmrb"]
-resource_name = "run"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("character:visible")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0009999999, 1),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -243,16 +244,16 @@ tracks/1/path = NodePath("character:position")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.001, 1),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.40533876, 1.6162806, -12.373571), Vector3(4.266055, 1.6162806, -12.373571)]
+"values": [Vector3(-0.40533876, 1.6162806, 0.62418175), Vector3(4.374531, 1.6162806, 0.62418175)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_pnhnk"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_24uko"]
 _data = {
-&"RESET": SubResource("Animation_pnhnk"),
-&"run": SubResource("Animation_0cmrb")
+&"RESET": SubResource("Animation_0cmrb"),
+&"run": SubResource("Animation_pnhnk")
 }
 
 [node name="level" type="Node3D" unique_id=524820426]
@@ -588,7 +589,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
 
 [node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer")]
-transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -3.4421983)
+transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -9.4519615)
 script = ExtResource("19_3a44l")
 animationPlayer = NodePath("../scare2/AnimationPlayer")
 anim_name = "run"
@@ -611,12 +612,13 @@ libraries/ = SubResource("AnimationLibrary_3a44l")
 [node name="scare2" type="Node3D" parent="." unique_id=2066438]
 
 [node name="character" type="MeshInstance3D" parent="scare2" unique_id=1729641063]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40533876, 1.6162806, -12.373571)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40533876, 1.6162806, 0.62418175)
+visible = false
 mesh = SubResource("CapsuleMesh_3a44l")
 skeleton = NodePath("../..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="scare2" unique_id=913448422]
-libraries/ = SubResource("AnimationLibrary_pnhnk")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scare2" unique_id=531386937]
+libraries/ = SubResource("AnimationLibrary_24uko")
 
 [connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="scare_trigger2" to="scare_trigger2" method="trigger_entered"]
