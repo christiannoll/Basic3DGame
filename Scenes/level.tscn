@@ -197,30 +197,29 @@ _data = {
 radial_segments = 24
 
 [sub_resource type="Animation" id="Animation_pnhnk"]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("character:position")
+tracks/0/path = NodePath("character:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.6028459, 1.6162806, -14.128116)]
+"update": 1,
+"values": [true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("character:visible")
+tracks/1/path = NodePath("character:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Vector3(-0.40533876, 1.6162806, -12.373571)]
 }
 
 [sub_resource type="Animation" id="Animation_0cmrb"]
@@ -228,26 +227,26 @@ resource_name = "run"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("character:position")
+tracks/0/path = NodePath("character:visible")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-1.6028459, 1.6162806, -14.128116), Vector3(-8.8922205, 1.6162806, -14.128116)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("character:visible")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0.0009999999, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("character:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.001, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.40533876, 1.6162806, -12.373571), Vector3(4.266055, 1.6162806, -12.373571)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pnhnk"]
@@ -589,7 +588,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
 
 [node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer")]
-transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.07784295, -5.3755937)
+transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -3.4421983)
 script = ExtResource("19_3a44l")
 animationPlayer = NodePath("../scare2/AnimationPlayer")
 anim_name = "run"
@@ -612,7 +611,7 @@ libraries/ = SubResource("AnimationLibrary_3a44l")
 [node name="scare2" type="Node3D" parent="." unique_id=2066438]
 
 [node name="character" type="MeshInstance3D" parent="scare2" unique_id=1729641063]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6028459, 1.6162806, -14.128116)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40533876, 1.6162806, -12.373571)
 mesh = SubResource("CapsuleMesh_3a44l")
 skeleton = NodePath("../..")
 
