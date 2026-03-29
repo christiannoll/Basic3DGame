@@ -194,6 +194,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3a44l"]
+radial_segments = 24
 
 [node name="level" type="Node3D" unique_id=524820426]
 
@@ -548,7 +549,7 @@ skeleton = NodePath("../..")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scare" unique_id=1372790576]
 libraries/ = SubResource("AnimationLibrary_3a44l")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1729641063]
+[node name="character" type="MeshInstance3D" parent="." unique_id=1729641063]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6986852, 1.6162806, -12.837128)
 mesh = SubResource("CapsuleMesh_3a44l")
 
