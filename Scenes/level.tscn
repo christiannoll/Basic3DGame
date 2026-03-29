@@ -196,6 +196,66 @@ _data = {
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3a44l"]
 radial_segments = 24
 
+[sub_resource type="Animation" id="Animation_pnhnk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.6028459, 1.6162806, -14.128116)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("character:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0cmrb"]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("character:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.6028459, 1.6162806, -14.128116), Vector3(-8.8922205, 1.6162806, -14.128116)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("character:visible")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0009999999, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pnhnk"]
+_data = {
+&"RESET": SubResource("Animation_pnhnk"),
+&"run": SubResource("Animation_0cmrb")
+}
+
 [node name="level" type="Node3D" unique_id=524820426]
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
@@ -552,11 +612,12 @@ libraries/ = SubResource("AnimationLibrary_3a44l")
 [node name="scare2" type="Node3D" parent="." unique_id=2066438]
 
 [node name="character" type="MeshInstance3D" parent="scare2" unique_id=1729641063]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4527502, 1.6162806, -12.837128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6028459, 1.6162806, -14.128116)
 mesh = SubResource("CapsuleMesh_3a44l")
 skeleton = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scare2" unique_id=913448422]
+libraries/ = SubResource("AnimationLibrary_pnhnk")
 
 [connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="scare_trigger2" to="scare_trigger2" method="trigger_entered"]
