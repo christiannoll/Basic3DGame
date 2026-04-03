@@ -509,12 +509,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.318588, 5.52642, -0.976861
 [node name="light4" parent="lights" unique_id=630963093 instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8916702, 5.52642, -28.468962)
 
-[node name="Table" parent="." unique_id=404156894 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7460078, -30.559624)
-
-[node name="Table2" parent="." unique_id=562517950 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -7.8293324, 0.7460078, -30.559624)
-
 [node name="Flashlight" parent="." unique_id=360502918 instance=ExtResource("8_754fn")]
 transform = Transform3D(-0.19945674, 0, -0.014731198, 0, 0.2, 0, 0.014731198, 0, -0.19945674, -0.5731386, 1.4606438, -30.949368)
 
@@ -571,9 +565,6 @@ transform = Transform3D(0.02924761, 0, 0.67119646, 0, 1, 0, -0.67014885, 0, 0.02
 paper_material = ExtResource("16_2klc5")
 paper_ui_texture = ExtResource("17_nngtn")
 
-[node name="Table3" parent="." unique_id=765687163 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.038562253, 0, 0.9992562, -15.752585, 0.7460078, -32.131065)
-
 [node name="Paper2" parent="." unique_id=1540097731 instance=ExtResource("15_c7le1")]
 transform = Transform3D(0.6697513, 0, -0.03731557, 0, 1, 0, 0.037257325, 0, 0.67079836, -15.286002, 1.3832471, -32.135178)
 paper_material = ExtResource("2_6phgx")
@@ -589,6 +580,17 @@ scare_sound = NodePath("../scare_sound")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger" unique_id=1908091641]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
+
+[node name="Tables" type="Node3D" parent="." unique_id=1048070301]
+
+[node name="Table" parent="Tables" unique_id=404156894 instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7460078, -30.559624)
+
+[node name="Table2" parent="Tables" unique_id=562517950 instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -7.8293324, 0.7460078, -30.559624)
+
+[node name="Table3" parent="Tables" unique_id=765687163 instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.038562253, 0, 0.9992562, -15.752585, 0.7460078, -32.131065)
 
 [node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
 transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -9.4519615)
