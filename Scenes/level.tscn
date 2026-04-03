@@ -570,14 +570,27 @@ transform = Transform3D(0.6697513, 0, -0.03731557, 0, 1, 0, 0.037257325, 0, 0.67
 paper_material = ExtResource("2_6phgx")
 paper_ui_texture = ExtResource("18_vofx3")
 
-[node name="scare_trigger" type="Area3D" parent="." unique_id=1245636666 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
+[node name="Scare_Trigger" type="Node3D" parent="." unique_id=1084276574]
+
+[node name="scare_trigger" type="Area3D" parent="Scare_Trigger" unique_id=1245636666 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
 transform = Transform3D(2.3927803, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, -11.172412, -0.07784295, -1.76968)
 script = ExtResource("19_3a44l")
-animationPlayer = NodePath("../scare/AnimationPlayer")
+animationPlayer = NodePath("../../Scares/scare/AnimationPlayer")
 anim_name = "peek"
-scare_sound = NodePath("../scare_sound")
+scare_sound = NodePath("../../scare_sound")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger" unique_id=1908091641]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scare_Trigger/scare_trigger" unique_id=1908091641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
+shape = SubResource("BoxShape3D_vofx3")
+
+[node name="scare_trigger2" type="Area3D" parent="Scare_Trigger" unique_id=437253067 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
+transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -9.4519615)
+script = ExtResource("19_3a44l")
+animationPlayer = NodePath("../../Scares/scare2/AnimationPlayer")
+anim_name = "run"
+scare_sound = NodePath("../../scare_sound")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scare_Trigger/scare_trigger2" unique_id=1769468586]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
 shape = SubResource("BoxShape3D_vofx3")
 
@@ -592,41 +605,32 @@ transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458,
 [node name="Table3" parent="Tables" unique_id=765687163 instance=ExtResource("7_8c0lf")]
 transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.038562253, 0, 0.9992562, -15.752585, 0.7460078, -32.131065)
 
-[node name="scare_trigger2" type="Area3D" parent="." unique_id=437253067 node_paths=PackedStringArray("animationPlayer", "scare_sound")]
-transform = Transform3D(3.019823, 0, 0, 0, 1.9818797, 0, 0, 0, 0.35597378, 1.7111213, -0.024938583, -9.4519615)
-script = ExtResource("19_3a44l")
-animationPlayer = NodePath("../scare2/AnimationPlayer")
-anim_name = "run"
-scare_sound = NodePath("../scare_sound")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="scare_trigger2" unique_id=1769468586]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86610746, 0)
-shape = SubResource("BoxShape3D_vofx3")
-
-[node name="scare" type="Node3D" parent="." unique_id=1526226374]
-
-[node name="face" type="MeshInstance3D" parent="scare" unique_id=386656303]
-transform = Transform3D(0.88777024, -0.6618901, -0.05566101, 0.8189002, 0.70994663, 0.15665542, -0.057612512, -0.10815159, 1.3689902, -9.447445, 2.132523, -11.600448)
-material_override = ExtResource("19_00k4y")
-mesh = SubResource("QuadMesh_vofx3")
-skeleton = NodePath("../..")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="scare" unique_id=1372790576]
-libraries/ = SubResource("AnimationLibrary_3a44l")
-
-[node name="scare2" type="Node3D" parent="." unique_id=2066438]
-
-[node name="character" type="MeshInstance3D" parent="scare2" unique_id=1729641063]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40533876, 1.6162806, 0.62418175)
-visible = false
-mesh = SubResource("CapsuleMesh_3a44l")
-skeleton = NodePath("../..")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="scare2" unique_id=531386937]
-libraries/ = SubResource("AnimationLibrary_24uko")
-
 [node name="scare_sound" type="AudioStreamPlayer" parent="." unique_id=1854649723]
 stream = ExtResource("21_0cmrb")
 
-[connection signal="body_entered" from="scare_trigger" to="scare_trigger" method="trigger_entered"]
-[connection signal="body_entered" from="scare_trigger2" to="scare_trigger2" method="trigger_entered"]
+[node name="Scares" type="Node3D" parent="." unique_id=704526382]
+
+[node name="scare" type="Node3D" parent="Scares" unique_id=1526226374]
+
+[node name="face" type="MeshInstance3D" parent="Scares/scare" unique_id=386656303]
+transform = Transform3D(0.88777024, -0.6618901, -0.05566101, 0.8189002, 0.70994663, 0.15665542, -0.057612512, -0.10815159, 1.3689902, -9.447445, 2.132523, -11.600448)
+material_override = ExtResource("19_00k4y")
+mesh = SubResource("QuadMesh_vofx3")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scares/scare" unique_id=1372790576]
+libraries/ = SubResource("AnimationLibrary_3a44l")
+
+[node name="scare2" type="Node3D" parent="Scares" unique_id=2066438]
+
+[node name="character" type="MeshInstance3D" parent="Scares/scare2" unique_id=1729641063]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40533876, 1.6162806, 0.62418175)
+visible = false
+mesh = SubResource("CapsuleMesh_3a44l")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Scares/scare2" unique_id=531386937]
+libraries/ = SubResource("AnimationLibrary_24uko")
+
+[connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
+[connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
