@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://b6ht0t3kpa75o"]
 
+[ext_resource type="Script" uid="uid://ga4onxdjltdb" path="res://Scripts/pause_menu.gd" id="1_emv3i"]
+
 [node name="Pause_menu" type="Control" unique_id=1778247008]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_emv3i")
 
 [node name="background" type="ColorRect" parent="." unique_id=1699306112]
 layout_mode = 0
