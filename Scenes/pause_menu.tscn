@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b6ht0t3kpa75o"]
+
+[node name="Pause_menu" type="Control" unique_id=1778247008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="." unique_id=1699306112]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="paused_text" type="RichTextLabel" parent="." unique_id=813747827]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 2.0
+offset_right = 930.0
+offset_bottom = 164.0
+theme_override_font_sizes/normal_font_size = 100
+text = "PAUSED"
+
+[node name="resume_button" type="Button" parent="." unique_id=1247878641]
+modulate = Color(0.29803923, 0.7372549, 0, 1)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 134.0
+offset_right = 754.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 40
+text = "RESUME"
+
+[node name="settings_button" type="Button" parent="." unique_id=881119172]
+modulate = Color(0.29803923, 0.7372549, 0, 1)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 229.0
+offset_right = 754.0
+offset_bottom = 317.0
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+
+[node name="controls_button" type="Button" parent="." unique_id=1100629203]
+modulate = Color(0.29803923, 0.7372549, 0, 1)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 324.0
+offset_right = 754.0
+offset_bottom = 412.0
+theme_override_font_sizes/font_size = 40
+text = "CONTROLS"
+
+[node name="menu_button" type="Button" parent="." unique_id=505658384]
+modulate = Color(0.29803923, 0.7372549, 0, 1)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 419.0
+offset_right = 754.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 40
+text = "QUIT TO MENU"
+
+[node name="menu_button2" type="Button" parent="." unique_id=1277567179]
+modulate = Color(0.29803923, 0.7372549, 0, 1)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 514.0
+offset_right = 754.0
+offset_bottom = 602.0
+theme_override_font_sizes/font_size = 40
+text = "QUIT GAME"
