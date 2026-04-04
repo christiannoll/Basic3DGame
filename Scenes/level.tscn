@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cd3tju67xah55" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="Material" uid="uid://bnxvyht4twwum" path="res://Materials/wall.tres" id="2_6phgx"]
 [ext_resource type="Material" uid="uid://dxvaw0qc8u2rd" path="res://Materials/floor.tres" id="2_81xng"]
+[ext_resource type="PackedScene" uid="uid://b6ht0t3kpa75o" path="res://Scenes/pause_menu.tscn" id="2_pnhnk"]
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="4_wqkje"]
 [ext_resource type="PackedScene" uid="uid://7hbvoevlg62r" path="res://Scenes/door.tscn" id="5_qxfql"]
 [ext_resource type="PackedScene" uid="uid://hpfjta44rurm" path="res://Scenes/light.tscn" id="6_0f350"]
@@ -260,6 +261,9 @@ _data = {
 [node name="level" type="Node3D" unique_id=524820426]
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
+
+[node name="Pause_menu" parent="." unique_id=1778247008 instance=ExtResource("2_pnhnk")]
+visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1362118628]
 environment = SubResource("Environment_k5f4k")

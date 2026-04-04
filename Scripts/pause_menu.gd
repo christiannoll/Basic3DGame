@@ -7,7 +7,7 @@ func _process(delta: float) -> void:
 		visible = get_tree().paused
 		if get_tree().paused == true:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		else:
+		if get_tree().paused == false:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 		
 func resume():
