@@ -4,3 +4,15 @@ extends Control
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		get_tree().paused = !get_tree().paused
+		visible = get_tree().paused
+		
+		
+func resume():
+	get_tree().paused = false
+	visible = false
+	
+func back_to_menu():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	
+func quit_game():
+	get_tree().quit()
