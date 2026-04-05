@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b6bq8qdmcyc62"]
 
+[ext_resource type="Script" uid="uid://crewy63hix5fl" path="res://Scripts/monster.gd" id="1_i44lo"]
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="1_xhoai"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rpp4a"]
@@ -7,6 +8,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xhoai"]
 
 [node name="Monster" type="CharacterBody3D" unique_id=1678673141]
+script = ExtResource("1_i44lo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1993513783]
 shape = SubResource("CapsuleShape3D_rpp4a")
@@ -18,3 +20,5 @@ mesh = SubResource("CapsuleMesh_xhoai")
 transform = Transform3D(1, 0, 0, 0, 0.18204945, 0, 0, 0, 1, 0, 0.38681018, -0.41836)
 material_override = ExtResource("1_xhoai")
 mesh = SubResource("CapsuleMesh_xhoai")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1549117780]
