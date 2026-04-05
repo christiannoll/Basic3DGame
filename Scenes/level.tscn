@@ -282,6 +282,17 @@ shadow_enabled = true
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=100582496]
 navigation_mesh = SubResource("NavigationMesh_pnhnk")
 
+[node name="Tables" type="Node3D" parent="NavigationRegion3D" unique_id=1048070301]
+
+[node name="Table" parent="NavigationRegion3D/Tables" unique_id=404156894 instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7460078, -30.559624)
+
+[node name="Table2" parent="NavigationRegion3D/Tables" unique_id=562517950 instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -7.8293324, 0.7460078, -30.559624)
+
+[node name="Table3" parent="NavigationRegion3D/Tables" unique_id=765687163 instance=ExtResource("7_8c0lf")]
+transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.038562253, 0, 0.9992562, -15.752585, 0.7460078, -32.131065)
+
 [node name="floors_and_walls" type="Node3D" parent="NavigationRegion3D" unique_id=513707998]
 
 [node name="floor" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1546409189]
@@ -602,17 +613,6 @@ paper_ui_texture = ExtResource("17_nngtn")
 transform = Transform3D(0.6697513, 0, -0.03731557, 0, 1, 0, 0.037257325, 0, 0.67079836, -15.286002, 1.3832471, -32.135178)
 paper_material = ExtResource("2_6phgx")
 paper_ui_texture = ExtResource("18_vofx3")
-
-[node name="Tables" type="Node3D" parent="." unique_id=1048070301]
-
-[node name="Table" parent="Tables" unique_id=404156894 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7460078, -30.559624)
-
-[node name="Table2" parent="Tables" unique_id=562517950 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -7.8293324, 0.7460078, -30.559624)
-
-[node name="Table3" parent="Tables" unique_id=765687163 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.038562253, 0, 0.9992562, -15.752585, 0.7460078, -32.131065)
 
 [node name="Scares" type="Node3D" parent="." unique_id=704526382]
 
