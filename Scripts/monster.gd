@@ -32,3 +32,7 @@ func _physics_process(delta: float) -> void:
 			
 func update_traget_location(target_location):
 	$NavigationAgend3D.target_position = target_location
+	
+func on_navigation_agent_3d_velocity_computed(safe_velocity):
+	velocity = velocity.move_toward(safe_velocity, 0.25)
+	move_and_slide()

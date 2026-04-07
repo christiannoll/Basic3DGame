@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bc8inpmgj57ne"]
 
+[ext_resource type="Script" uid="uid://dc65rpbj2gh4h" path="res://Scripts/level_manager.gd" id="1_24uko"]
 [ext_resource type="PackedScene" uid="uid://b611342n8rhyw" path="res://Scenes/ui.tscn" id="1_k5f4k"]
 [ext_resource type="PackedScene" uid="uid://cd3tju67xah55" path="res://Scenes/player.tscn" id="1_tumq0"]
 [ext_resource type="Material" uid="uid://bnxvyht4twwum" path="res://Materials/wall.tres" id="2_6phgx"]
@@ -266,6 +267,7 @@ _data = {
 }
 
 [node name="level" type="Node3D" unique_id=524820426]
+script = ExtResource("1_24uko")
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
 
