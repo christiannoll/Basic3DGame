@@ -1,9 +1,11 @@
 extends CharacterBody3D
 
 var SPEED = 4
+var jumpscareTime = 2
 var player
 var caught = false
 var distance: float
+@export var scene_name: String
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
@@ -19,4 +21,14 @@ func _physics_process(delta: float) -> void:
 		$NavigationAgent3D.set_velocity(new_velocity)
 		var look_dir = atan2(-velocity.y, -velocity.z)
 		rotation.y = look_dir
-		distance = player.global_transform.origin.distance_to(global_transform.origin) 
+		distance = player.global_transform.origin.distance_to(global_transform.origin)
+		if distance < 2 && caught == false:
+			player.visible = false
+			SPEED = 0
+			caught = true
+			$jumpscare_camera.current = true
+			await get_tree().create_timer(jumpscareTime, false).timeout
+			get_tree().current_scene_to_file("res://Scenes/" + scene_name + ".tscn")
+			
+func update_traget_location(target_location):
+	$NavigationAgend3D.target_position = target_location
