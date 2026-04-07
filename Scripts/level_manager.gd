@@ -1,11 +1,9 @@
 extends Node3D
 
+var player
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	player = get_node("/root/" + get_tree().current_scene.name + "/Player")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	get_tree().call_group("monster", "update_target_location", player.global_transform_origin)
