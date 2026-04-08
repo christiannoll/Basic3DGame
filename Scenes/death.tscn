@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://bxh4rjfgtadb2"]
 
+[ext_resource type="Script" uid="uid://gntd2t4sthi7" path="res://Scripts/death.gd" id="1_g62mh"]
+
 [node name="Death" type="Node2D" unique_id=714446080]
+script = ExtResource("1_g62mh")
+scene_name = "level"
 
 [node name="background" type="ColorRect" parent="." unique_id=1164029483]
 offset_right = 1153.0

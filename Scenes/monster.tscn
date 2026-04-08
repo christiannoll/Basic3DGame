@@ -9,6 +9,7 @@
 
 [node name="Monster" type="CharacterBody3D" unique_id=1678673141 groups=["monster"]]
 script = ExtResource("1_i44lo")
+scene_name = "death"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1993513783]
 shape = SubResource("CapsuleShape3D_rpp4a")
