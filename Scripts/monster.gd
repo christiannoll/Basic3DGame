@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 			caught = true
 			$jumpscare_camera.current = true
 			await get_tree().create_timer(jumpscareTime, false).timeout
-			get_tree().current_scene_to_file("res://Scenes/" + scene_name + ".tscn")
+			get_tree().change_scene_to_file("res://Scenes/" + scene_name + ".tscn")
 			
 func update_traget_location(target_location):
 	$NavigationAgend3D.target_position = target_location
