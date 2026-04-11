@@ -23,6 +23,7 @@
 [ext_resource type="Material" uid="uid://b8dwf15jqhdaq" path="res://Materials/face.tres" id="19_00k4y"]
 [ext_resource type="Script" uid="uid://dlwf8mw0p8x7v" path="res://Scripts/scare_trigger.gd" id="19_3a44l"]
 [ext_resource type="AudioStream" uid="uid://cudvrghhug2qa" path="res://Sounds/sudden-scare.mp3" id="21_0cmrb"]
+[ext_resource type="PackedScene" uid="uid://b6bq8qdmcyc62" path="res://Scenes/monster.tscn" id="24_gf56v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -651,6 +652,9 @@ stream = ExtResource("14_c7le1")
 
 [node name="scare_sound" type="AudioStreamPlayer" parent="Sounds" unique_id=1854649723]
 stream = ExtResource("21_0cmrb")
+
+[node name="Monster" parent="." unique_id=1678673141 instance=ExtResource("24_gf56v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7035875, 2.0100927, 4.001855)
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
