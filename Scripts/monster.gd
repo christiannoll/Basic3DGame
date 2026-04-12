@@ -19,10 +19,10 @@ func _physics_process(delta: float) -> void:
 		var next_location = $NavigationAgent3D.get_next_path_position()
 		var new_velocity = (next_location - current_location).normalized() * SPEED
 		$NavigationAgent3D.set_velocity(new_velocity)
-		var look_dir = atan2(-velocity.y, -velocity.z)
+		var look_dir = atan2(-velocity.x, -velocity.z)
 		rotation.y = look_dir
 		distance = player.global_transform.origin.distance_to(global_transform.origin)
-		if distance < 2 && caught == false:
+		if distance <= 2 && caught == false:
 			player.visible = false
 			SPEED = 0
 			caught = true
