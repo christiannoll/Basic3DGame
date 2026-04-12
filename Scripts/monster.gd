@@ -30,8 +30,8 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer(jumpscareTime, false).timeout
 			get_tree().change_scene_to_file("res://Scenes/" + scene_name + ".tscn")
 			
-func update_traget_location(target_location):
-	$NavigationAgend3D.target_position = target_location
+func update_target_location(target_location):
+	$NavigationAgent3D.target_position = target_location
 	
 func on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = velocity.move_toward(safe_velocity, 0.25)
