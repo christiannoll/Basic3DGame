@@ -267,6 +267,8 @@ _data = {
 &"run": SubResource("Animation_pnhnk")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_gf56v"]
+
 [node name="level" type="Node3D" unique_id=524820426]
 script = ExtResource("1_24uko")
 
@@ -656,6 +658,11 @@ stream = ExtResource("21_0cmrb")
 [node name="Monster" parent="." unique_id=1678673141 instance=ExtResource("24_gf56v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7035875, 2.0100927, 4.001855)
 visible = false
+
+[node name="monster_spawner" type="Area3D" parent="." unique_id=1714855960]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="monster_spawner" unique_id=896686427]
+shape = SubResource("BoxShape3D_gf56v")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
