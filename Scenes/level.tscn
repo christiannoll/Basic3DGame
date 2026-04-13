@@ -660,6 +660,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7035875, 2.0100927, 4.0018
 visible = false
 
 [node name="monster_spawner" type="Area3D" parent="." unique_id=1714855960]
+transform = Transform3D(2.9296057, 0, 0, 0, 1.9192338, 0, 0, 0, 0.32917175, 1.6935575, 1.5618937, -1.7444539)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="monster_spawner" unique_id=896686427]
 shape = SubResource("BoxShape3D_gf56v")
