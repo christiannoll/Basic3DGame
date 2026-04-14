@@ -660,12 +660,14 @@ stream = ExtResource("21_0cmrb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7035875, 2.0100927, 4.001855)
 visible = false
 
-[node name="monster_spawner" type="Area3D" parent="." unique_id=1714855960]
+[node name="monster_spawner" type="Area3D" parent="." unique_id=1714855960 node_paths=PackedStringArray("monster")]
 transform = Transform3D(2.9296057, 0, 0, 0, 1.9192338, 0, 0, 0, 0.32917175, 1.6935575, 1.5618937, -1.7444539)
 script = ExtResource("25_6y3s5")
+monster = NodePath("../Monster")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="monster_spawner" unique_id=896686427]
 shape = SubResource("BoxShape3D_gf56v")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
+[connection signal="body_entered" from="monster_spawner" to="monster_spawner" method="spawn_monster"]
