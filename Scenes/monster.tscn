@@ -29,6 +29,11 @@ avoidance_enabled = true
 [node name="jumpscare_camera" type="Camera3D" parent="." unique_id=2038913180]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.3924551, -1.3951818)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="jumpscare_camera" unique_id=1032112149]
+layers = 16384
+light_energy = 0.5
+omni_range = 2.0
+
 [node name="jumpscare" type="AudioStreamPlayer" parent="." unique_id=1216868744]
 stream = ExtResource("3_hyvb2")
 
