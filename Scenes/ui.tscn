@@ -47,6 +47,7 @@ texture = ExtResource("1_jxero")
 expand_mode = 1
 
 [node name="flashlight_stuff" type="Control" parent="." unique_id=782691918]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
