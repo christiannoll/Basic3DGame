@@ -19,3 +19,4 @@ func _process(delta: float) -> void:
 		flashlight_energy.value -= drain_rate * delta
 	if flashlight_energy.value == 0 && visible:
 		visible = false
+		flashlight_ui.visible = false
