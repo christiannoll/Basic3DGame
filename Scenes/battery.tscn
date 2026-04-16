@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://balc5jhnj32gy"]
 
+[ext_resource type="Script" uid="uid://lb4wyobahe0w" path="res://Scripts/battery.gd" id="1_23u8t"]
 [ext_resource type="Material" uid="uid://y2ekeshc8i08" path="res://Materials/flashlight_top.tres" id="1_mjabg"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_23u8t"]
@@ -8,6 +9,7 @@
 size = Vector3(1, 1.0883789, 1)
 
 [node name="battery" type="StaticBody3D" unique_id=240790748]
+script = ExtResource("1_23u8t")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1868871152]
 material_override = ExtResource("1_mjabg")
