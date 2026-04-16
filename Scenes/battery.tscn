@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://balc5jhnj32gy"]
+
+[ext_resource type="Material" uid="uid://y2ekeshc8i08" path="res://Materials/flashlight_top.tres" id="1_mjabg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_23u8t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l2pcn"]
+size = Vector3(1, 1.0883789, 1)
+
+[node name="battery" type="StaticBody3D" unique_id=240790748]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1868871152]
+material_override = ExtResource("1_mjabg")
+mesh = SubResource("CylinderMesh_23u8t")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=840587713]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.7008739, 0)
+mesh = SubResource("CylinderMesh_23u8t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1477560075]
+transform = Transform3D(1, 0, 0, 0, 1.9854369, 0, 0, 0, 1, 0, 0.08696157, 0)
+shape = SubResource("BoxShape3D_l2pcn")
