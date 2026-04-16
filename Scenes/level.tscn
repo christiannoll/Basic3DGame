@@ -670,13 +670,13 @@ monster = NodePath("../Monster")
 shape = SubResource("BoxShape3D_gf56v")
 
 [node name="battery" parent="." unique_id=240790748 instance=ExtResource("26_u0did")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.30744767, 1.4863515, -29.525595)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.30744767, 1.4863515, -29.740225)
 
 [node name="battery2" parent="." unique_id=531274657 instance=ExtResource("26_u0did")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4863515, -29.525595)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4863515, -29.740225)
 
 [node name="battery3" parent="." unique_id=1599722839 instance=ExtResource("26_u0did")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4863515, -29.525595)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4863515, -29.740225)
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
