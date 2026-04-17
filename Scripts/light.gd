@@ -1,11 +1,16 @@
 extends Node3D
 
+@export var min_time: float
+@export var max_time: float
+@export var min_flash_time: float
+@export var max_flash_time: float
+var loop = true
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if loop:
+		loop = false
+		var rng = RandomNumberGenerator.new()
+		var rand = rng.randf_range(min_time, max_time)
+		await get_tree().create_timer(rand, false).timeout
+		pass
+		
