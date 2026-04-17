@@ -537,6 +537,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3313465, 5.658647, 26.0211
 flash_lights_at_rand = true
 min_time = 10.0
 max_time = 30.0
+animation_time = 1.5
 
 [node name="light3" parent="lights" unique_id=235537008 instance=ExtResource("6_0f350")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.318588, 5.52642, -0.97686195)
