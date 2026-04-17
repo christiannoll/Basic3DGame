@@ -2,6 +2,7 @@
 
 [ext_resource type="Material" uid="uid://cighiohd5f6re" path="res://Materials/ light.tres" id="1_veqsg"]
 [ext_resource type="Script" uid="uid://4hq46l6067i7" path="res://Scripts/light.gd" id="1_wh1uv"]
+[ext_resource type="AudioStream" uid="uid://cm22xclqqson1" path="res://Sounds/flickering_light.mp3" id="3_hsho4"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_iav5y"]
 
@@ -57,3 +58,8 @@ omni_range = 8.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=475916806]
 libraries/ = SubResource("AnimationLibrary_hsho4")
+
+[node name="flicker_sound" type="AudioStreamPlayer3D" parent="." unique_id=2067608321]
+stream = ExtResource("3_hsho4")
+volume_db = 0.5
+max_distance = 15.0

@@ -18,14 +18,17 @@ func _process(delta: float) -> void:
 		if loop_flashing == true:
 			$AnimationPlayer.get_animation("flashing_light").loop = true
 		$AnimationPlayer.play("flashing_light")
+		$flicker_sound.play()
 		if loop_flashing == false:
 			await get_tree().create_timer(animation_time, false).timeout
 			$AnimationPlayer.play("RESET")
+			$flicker_sound.stop()
 			loop = true
 		if loop_flashing == true:
 			var rand2 = rng.randf_range(min_flash_time, max_flash_time)
 			await get_tree().create_timer(rand2, false).timeout
 			$AnimationPlayer.play("RESET")
+			$flicker_sound.stop()
 			loop = true
 			
 			
