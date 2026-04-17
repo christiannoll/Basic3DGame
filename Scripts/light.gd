@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		if loop_flashing:
 			var rand2 = rng.randf_range(min_flash_time, max_flash_time)
 			await get_tree().create_timer(rand2, false).timeout
-			$AnimationPlayer.get_animation("flashing_light").loop = false
+			$AnimationPlayer.play("RESET")
 			loop = true
 		else:
 			loop = true
