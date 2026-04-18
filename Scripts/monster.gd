@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var SPEED = 4
+var SPEED = 1
 var jumpscareTime = 2
 var player
 var caught = false
