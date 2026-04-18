@@ -524,47 +524,6 @@ transform = Transform3D(1.8261276, 0, 0, 0, 1.9999996, 0, 0, 0, 2, 0.11010122, 0
 material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_ha31o")
 
-[node name="Door2" parent="NavigationRegion3D/floors_and_walls" unique_id=1573572517 node_paths=PackedStringArray("key") instance=ExtResource("5_qxfql")]
-transform = Transform3D(1.5503582, 0, 0, 0, 1.9053168, 0, 0, 0, 1, -5.0121865, 2.1685038, -15.883538)
-key = NodePath("../../../key")
-locked = true
-
-[node name="door_wall4" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1361564836]
-transform = Transform3D(0.92531604, 0, 0, 0, 1.6577128, 0, 0, 0, 0.29062498, -3.5226934, 2.1880908, -16.042198)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/door_wall4" unique_id=1566146817]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-shape = SubResource("BoxShape3D_qxfql")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/door_wall4" unique_id=1910875346]
-transform = Transform3D(1.8261276, 0, 0, 0, 1.9999996, 0, 0, 0, 2, 0.1101017, 0, 0.9024124)
-material_override = ExtResource("2_6phgx")
-mesh = SubResource("BoxMesh_ha31o")
-
-[node name="door_wall5" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=910384010]
-transform = Transform3D(0.8228039, 0, 0, 0, 1.6517409, 0, 0, 0, 0.29062498, -6.6282983, 2.14889, -16.09573)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/door_wall5" unique_id=854844603]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-shape = SubResource("BoxShape3D_qxfql")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/door_wall5" unique_id=584467833]
-transform = Transform3D(1.8261276, 0, 0, 0, 1.9999996, 0, 0, 0, 2, 0.11010122, 0.015178084, 0.90242004)
-material_override = ExtResource("2_6phgx")
-mesh = SubResource("BoxMesh_ha31o")
-
-[node name="door_wall6" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1207589861]
-transform = Transform3D(2.481, 0, 0, 0, 0.8662859, 0, 0, 0, 0.291, -5.2275906, 4.67281, -16.061855)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/door_wall6" unique_id=1325270150]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-shape = SubResource("BoxShape3D_qxfql")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/door_wall6" unique_id=1263197246]
-transform = Transform3D(1.8261276, 0, 0, 0, 1.9999996, 0, 0, 0, 2, 0.11010122, 0.015178084, 0.90242004)
-material_override = ExtResource("2_6phgx")
-mesh = SubResource("BoxMesh_ha31o")
-
 [node name="Player" parent="." unique_id=1211612180 instance=ExtResource("1_tumq0")]
 transform = Transform3D(0.005305818, 0, -0.99998593, 0, 1, 0, 0.99998593, 0, 0.005305818, -5.9862366, 1.5, -30.29963)
 
