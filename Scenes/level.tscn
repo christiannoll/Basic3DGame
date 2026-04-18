@@ -523,7 +523,7 @@ mesh = SubResource("BoxMesh_ha31o")
 transform = Transform3D(0.005305818, 0, -0.99998593, 0, 1, 0, 0.99998593, 0, 0.005305818, -5.9862366, 1.5, -30.29963)
 
 [node name="Door" parent="." unique_id=1436056146 node_paths=PackedStringArray("key") instance=ExtResource("5_qxfql")]
-transform = Transform3D(1.5503582, 0, 0, 0, 1.9053168, 0, 0, 0, 1, -4.731325, 2.1685038, -24.616615)
+transform = Transform3D(1.6768141, 0, 0, 0, 1.9053168, 0, 0, 0, 1, -4.9217706, 2.1685038, -24.616615)
 key = NodePath("../key")
 locked = true
 
