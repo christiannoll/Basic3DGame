@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://crewy63hix5fl" path="res://Scripts/monster.gd" id="1_i44lo"]
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="1_xhoai"]
 [ext_resource type="AudioStream" uid="uid://cudvrghhug2qa" path="res://Sounds/sudden-scare.mp3" id="3_hyvb2"]
+[ext_resource type="Script" uid="uid://cyhhawvjc3rwd" path="res://Scripts/enemy_raycast.gd" id="4_ujuxu"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rpp4a"]
 
@@ -39,5 +40,7 @@ stream = ExtResource("3_hyvb2")
 
 [node name="RayCast3D" type="RayCast3D" parent="." unique_id=951729227]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.51385146)
+collision_mask = 3
+script = ExtResource("4_ujuxu")
 
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="on_navigation_agent_3d_velocity_computed"]
