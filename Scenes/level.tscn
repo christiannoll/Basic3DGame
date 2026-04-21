@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://b6bq8qdmcyc62" path="res://Scenes/monster.tscn" id="24_gf56v"]
 [ext_resource type="Script" uid="uid://dqjeowolwkln2" path="res://Scripts/monster_spawner.gd" id="25_6y3s5"]
 [ext_resource type="PackedScene" uid="uid://balc5jhnj32gy" path="res://Scenes/battery.tscn" id="26_u0did"]
+[ext_resource type="PackedScene" uid="uid://xmdo80gtwcuh" path="res://Scenes/painting.tscn" id="27_53r2q"]
+[ext_resource type="Material" uid="uid://cwewsb21mrioe" path="res://Materials/painting.tres" id="28_luodc"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -687,6 +689,10 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4863515, 
 
 [node name="battery3" parent="." unique_id=1599722839 instance=ExtResource("26_u0did")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4863515, -29.740225)
+
+[node name="Painting" parent="." unique_id=1583656101 instance=ExtResource("27_53r2q")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.4693108, 2.6893647, -27.550474)
+painting_mat = ExtResource("28_luodc")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
