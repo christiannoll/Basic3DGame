@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://xmdo80gtwcuh"]
 
+[ext_resource type="Script" uid="uid://b8qagbvb1ndsv" path="res://Scripts/painting.gd" id="1_qii2d"]
 [ext_resource type="Material" uid="uid://dxvaw0qc8u2rd" path="res://Materials/floor.tres" id="1_vskfb"]
-[ext_resource type="Material" uid="uid://cwewsb21mrioe" path="res://Materials/painting.tres" id="2_t5wkb"]
+[ext_resource type="Material" uid="uid://cvhx718x38lrp" path="res://Materials/paper.tres" id="3_wwaub"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ldbuk"]
 
@@ -10,6 +11,7 @@
 [sub_resource type="QuadMesh" id="QuadMesh_ldbuk"]
 
 [node name="Painting" type="StaticBody3D" unique_id=1583656101]
+script = ExtResource("1_qii2d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=819881630]
 shape = SubResource("BoxShape3D_ldbuk")
@@ -21,5 +23,5 @@ mesh = SubResource("BoxMesh_ldbuk")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=2011346260]
 transform = Transform3D(-3.757315e-08, 0, 1.0000001, 0, 0.8721499, 0, -0.8595736, 0, -4.3711392e-08, 0.06846857, 0, 0)
-material_override = ExtResource("2_t5wkb")
+material_override = ExtResource("3_wwaub")
 mesh = SubResource("QuadMesh_ldbuk")
