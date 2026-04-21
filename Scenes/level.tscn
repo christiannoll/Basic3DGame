@@ -691,7 +691,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4863515, 
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4863515, -29.740225)
 
 [node name="Painting" parent="." unique_id=1583656101 instance=ExtResource("27_53r2q")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.4693108, 2.6893647, -27.550474)
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0.4693108, 2.6893647, -27.550474)
 painting_mat = ExtResource("28_luodc")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
