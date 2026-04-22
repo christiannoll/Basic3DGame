@@ -10,8 +10,10 @@ func _ready() -> void:
 	
 func scare():
 	await get_tree().create_timer(stare_time, false).timeout
+	$jumpscare.play()
 	$MeshInstance3D2.material_override = scary_painting
 	await get_tree().create_timer(scare_time, false).timeout
+	$jumpscare.stop()
 	$MeshInstance3D2.material_override = painting_mat
 
 func stop_scare():

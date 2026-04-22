@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b8qagbvb1ndsv" path="res://Scripts/painting.gd" id="1_qii2d"]
 [ext_resource type="Material" uid="uid://dxvaw0qc8u2rd" path="res://Materials/floor.tres" id="1_vskfb"]
 [ext_resource type="Material" uid="uid://cvhx718x38lrp" path="res://Materials/paper.tres" id="3_wwaub"]
+[ext_resource type="AudioStream" uid="uid://cudvrghhug2qa" path="res://Sounds/sudden-scare.mp3" id="4_wwaub"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ldbuk"]
 
@@ -26,3 +27,7 @@ mesh = SubResource("BoxMesh_ldbuk")
 transform = Transform3D(-3.757315e-08, 0, 1.0000001, 0, 0.8721499, 0, -0.8595736, 0, -4.3711392e-08, 0.06846857, 0, 0)
 material_override = ExtResource("3_wwaub")
 mesh = SubResource("QuadMesh_ldbuk")
+
+[node name="jumpscare" type="AudioStreamPlayer3D" parent="." unique_id=1803328743]
+stream = ExtResource("4_wwaub")
+max_distance = 15.0
