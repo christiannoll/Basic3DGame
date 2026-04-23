@@ -695,6 +695,8 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4863515, 
 transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0.4693108, 2.6893647, -27.550474)
 painting_mat = ExtResource("28_luodc")
 scary_painting = ExtResource("29_1cgv8")
+stare_time = 4.0
+scare_time = 1.0
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
