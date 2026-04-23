@@ -12,15 +12,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if is_colliding():
 		var hit = get_collider()
-		last_hit = hit
 		if hit.has_method("interact"):
 			int_text.visible = true
 			if Input.is_action_just_pressed("interact"):
 				hit.interact()
-		if hit.has_method("scare"):
-			hit.scare()
 		else:
 			int_text.visible = false
+		if hit.has_method("scare"):
+			last_hit = hit
+			hit.scare()
 	else:
 		int_text.visible = false
 		if last_hit != null && last_hit.has_method("scare"):
