@@ -1,10 +1,14 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://dxvaw0qc8u2rd"]
 
 [ext_resource type="Texture2D" uid="uid://cypy1at3arknb" path="res://Texturtes/concrete_floor.png" id="1_hayvq"]
+[ext_resource type="Texture2D" uid="uid://bef2vtpgp0tdb" path="res://Texturtes/concrete_floor_occlusion.png" id="2_1fwau"]
 [ext_resource type="Texture2D" uid="uid://mcv885s045ig" path="res://Texturtes/concrete_floor_normal.png" id="2_xw8fe"]
 
 [resource]
 albedo_texture = ExtResource("1_hayvq")
 normal_enabled = true
 normal_texture = ExtResource("2_xw8fe")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_1fwau")
 uv1_scale = Vector3(30, 30, 4.5)
