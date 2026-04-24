@@ -1,6 +1,7 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://bnxvyht4twwum"]
 
 [ext_resource type="Texture2D" uid="uid://bwdogwwfsk8wv" path="res://Texturtes/fancy_wall.png" id="1_lcv6a"]
+[ext_resource type="Texture2D" uid="uid://dtal0288t3epu" path="res://Texturtes/fancy_wall_occlusion.png" id="2_1kb3l"]
 [ext_resource type="Texture2D" uid="uid://mue28g2xw34o" path="res://Texturtes/fancy_wall_normal.png" id="2_vn0u2"]
 
 [resource]
@@ -9,4 +10,7 @@ albedo_texture = ExtResource("1_lcv6a")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("2_vn0u2")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_1kb3l")
 uv1_scale = Vector3(9, 4, 1)

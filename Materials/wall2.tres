@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bwdogwwfsk8wv" path="res://Texturtes/fancy_wall.png" id="1_hh8ak"]
 [ext_resource type="Texture2D" uid="uid://mue28g2xw34o" path="res://Texturtes/fancy_wall_normal.png" id="2_6lj7e"]
+[ext_resource type="Texture2D" uid="uid://dtal0288t3epu" path="res://Texturtes/fancy_wall_occlusion.png" id="2_vhuni"]
 
 [resource]
 albedo_color = Color(0.8803258, 0.18677148, 0.113393, 1)
@@ -9,4 +10,7 @@ albedo_texture = ExtResource("1_hh8ak")
 roughness = 0.5
 normal_enabled = true
 normal_texture = ExtResource("2_6lj7e")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_vhuni")
 uv1_scale = Vector3(39, 4, 1)
