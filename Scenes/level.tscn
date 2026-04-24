@@ -307,7 +307,7 @@ transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.03856225
 [node name="floors_and_walls" type="Node3D" parent="NavigationRegion3D" unique_id=513707998]
 
 [node name="floor" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1546409189]
-transform = Transform3D(42.629066, 0, 0, 0, 1, 0, 0, 0, 69.39393, 0, 0, 0)
+transform = Transform3D(42.629066, 0, 0, 0, 1, 0, 0, 0, 69.39393, 0, 0.06019497, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/floor" unique_id=459057489]
 shape = SubResource("BoxShape3D_51e2h")
