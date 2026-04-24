@@ -296,10 +296,10 @@ navigation_mesh = SubResource("NavigationMesh_pnhnk")
 [node name="Tables" type="Node3D" parent="NavigationRegion3D" unique_id=1048070301]
 
 [node name="Table" parent="NavigationRegion3D/Tables" unique_id=404156894 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.7460078, -30.559624)
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -0.25059772, 0.6933323, -30.559624)
 
 [node name="Table2" parent="NavigationRegion3D/Tables" unique_id=562517950 instance=ExtResource("7_8c0lf")]
-transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -7.8293324, 0.7460078, -30.559624)
+transform = Transform3D(0.026613131, 0, 0.9996458, 0, 0.96967936, 0, -0.9996458, 0, 0.026613131, -7.8293324, 0.6845491, -30.559624)
 
 [node name="Table3" parent="NavigationRegion3D/Tables" unique_id=765687163 instance=ExtResource("7_8c0lf")]
 transform = Transform3D(0.9992562, 0, -0.038562253, 0, 0.96967936, 0, 0.038562253, 0, 0.9992562, -15.752585, 0.7460078, -32.131065)
@@ -555,7 +555,7 @@ max_flash_time = 15.0
 loop_flashing = true
 
 [node name="Flashlight" parent="." unique_id=360502918 instance=ExtResource("8_754fn")]
-transform = Transform3D(-0.19945674, 0, -0.014731198, 0, 0.2, 0, 0.014731198, 0, -0.19945674, -0.5731386, 1.4606438, -30.949368)
+transform = Transform3D(-0.19946289, -0.0017850988, -0.014538462, 0, 0.19850923, -0.02437387, 0.014647643, -0.024308411, -0.19797613, -0.5731386, 1.4033139, -30.949368)
 
 [node name="ambience_sounds" type="Node3D" parent="." unique_id=133983811]
 
@@ -597,7 +597,7 @@ far = 50.0
 libraries/ = SubResource("AnimationLibrary_oqgf2")
 
 [node name="key" parent="." unique_id=896870246 instance=ExtResource("12_ha31o")]
-transform = Transform3D(2.3849762e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, 2.3849762e-09, -7.7753897, 1.3797538, -30.207865)
+transform = Transform3D(2.3849762e-09, 0, -0.2, 0, 0.2, 0, 0.2, 0, 2.3849762e-09, -7.7753897, 1.3265656, -30.207865)
 
 [node name="Scare_Trigger" type="Node3D" parent="." unique_id=1084276574]
 
@@ -626,7 +626,7 @@ shape = SubResource("BoxShape3D_vofx3")
 [node name="Papers" type="Node3D" parent="." unique_id=43636160]
 
 [node name="Paper" parent="Papers" unique_id=915373991 instance=ExtResource("15_c7le1")]
-transform = Transform3D(0.02924761, 0, 0.67119646, 0, 1, 0, -0.67014885, 0, 0.029293332, -7.8390207, 1.3832471, -31.026125)
+transform = Transform3D(0.02924761, 0, 0.67119646, 0, 1, 0, -0.67014885, 0, 0.029293332, -7.8390207, 1.3305545, -31.026125)
 paper_material = ExtResource("16_2klc5")
 paper_ui_texture = ExtResource("17_nngtn")
 
@@ -683,13 +683,13 @@ monster = NodePath("../Monster")
 shape = SubResource("BoxShape3D_gf56v")
 
 [node name="battery" parent="." unique_id=240790748 instance=ExtResource("26_u0did")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.30744767, 1.4863515, -29.740225)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.30744767, 1.423861, -29.740225)
 
 [node name="battery2" parent="." unique_id=531274657 instance=ExtResource("26_u0did")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4863515, -29.740225)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4301941, -29.740225)
 
 [node name="battery3" parent="." unique_id=1599722839 instance=ExtResource("26_u0did")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4863515, -29.740225)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4287634, -29.740225)
 
 [node name="Painting" parent="." unique_id=1583656101 instance=ExtResource("27_53r2q")]
 transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0.4693108, 2.6893647, -27.550474)
