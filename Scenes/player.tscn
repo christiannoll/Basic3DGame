@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dcp8xocw3hx2a" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://dmpepy5ak3nxf" path="res://Scripts/camera.gd" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://dvdyd82274tgr" path="res://Sounds/Concrete-Footstep-1.mp3" id="2_ukyrk"]
 [ext_resource type="Script" uid="uid://cjfu2ol6d78b2" path="res://Scripts/flashlight.gd" id="3_6t5aa"]
+[ext_resource type="AudioStream" uid="uid://p75a5tadwn7m" path="res://Sounds/Concrete-Footstep-2.mp3" id="3_7dp3o"]
 [ext_resource type="AudioStream" uid="uid://b883dua0g08l8" path="res://Sounds/flashlight_on.mp3" id="4_fkybt"]
+[ext_resource type="AudioStream" uid="uid://pv6oe4kvcjaq" path="res://Sounds/Concrete-Footstep-3.mp3" id="4_h4iuc"]
 [ext_resource type="Script" uid="uid://cql0o7x0tnuuc" path="res://Scripts/raycast.gd" id="4_vgqql"]
+[ext_resource type="AudioStream" uid="uid://be2pxpxed3wux" path="res://Sounds/Concrete-Footstep-4.mp3" id="5_fd4e3"]
+[ext_resource type="AudioStream" uid="uid://dnbbh04v7noln" path="res://Sounds/Concrete-Footstep-5.mp3" id="6_qqcod"]
+[ext_resource type="AudioStream" uid="uid://dfdao4x76lhq8" path="res://Sounds/Concrete-Footstep-6.mp3" id="7_igrcy"]
+[ext_resource type="AudioStream" uid="uid://blogh7ijn631r" path="res://Sounds/Concrete-Footstep-7.mp3" id="8_fs7ks"]
+[ext_resource type="AudioStream" uid="uid://td63ml6nf16l" path="res://Sounds/Concrete-Footstep-8.mp3" id="9_l6n3p"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f60y1"]
 
@@ -14,6 +22,7 @@ radial_segments = 14
 [node name="Player" type="CharacterBody3D" unique_id=1718475060]
 transform = Transform3D(-0.99014866, 0, 0.14002001, 0, 1, 0, -0.14002001, 0, -0.99014866, 0, 0, 0)
 script = ExtResource("1_v0iea")
+walk_footsteps = Array[AudioStream]([ExtResource("2_ukyrk"), ExtResource("3_7dp3o"), ExtResource("4_h4iuc"), ExtResource("5_fd4e3"), ExtResource("6_qqcod"), ExtResource("7_igrcy"), ExtResource("8_fs7ks"), ExtResource("9_l6n3p")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1092570828]
 shape = SubResource("CapsuleShape3D_f60y1")
