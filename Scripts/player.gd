@@ -9,8 +9,11 @@ var sprint_slider
 var sprint_drain_amount = 0.1
 var sprint_refresh_amount = 0.1
 var movable = false
+var rng
+@export var walk_footsteps: Array[AudioStream]
 
 func _ready() -> void:
+	rng = RandomNumberGenerator.new()
 	ORIGINAL_SPEED = SPEED
 	sprint_slider = get_node("/root/" + get_tree().current_scene.name + "/UI/sprint_slider")
 
