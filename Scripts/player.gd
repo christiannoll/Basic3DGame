@@ -44,6 +44,10 @@ func _physics_process(delta: float) -> void:
 		var input_dir := Input.get_vector("left", "right", "forward", "backward")
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
+			if !$footstep_sound.playing:
+				var num = rng.randi_range(0, walk_footsteps.size() - 1)
+				$footstep_sound.stream = walk_footsteps[num]
+				$footstep_sound.play()
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
 			if Input.is_action_just_pressed("sprint"):
