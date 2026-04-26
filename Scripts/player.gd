@@ -11,6 +11,7 @@ var sprint_refresh_amount = 0.1
 var movable = false
 var rng
 @export var walk_footsteps: Array[AudioStream]
+@export var sprint_footsteps: Array[AudioStream]
 
 func _ready() -> void:
 	rng = RandomNumberGenerator.new()
@@ -45,8 +46,12 @@ func _physics_process(delta: float) -> void:
 		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			if !$footstep_sound.playing:
-				var num = rng.randi_range(0, walk_footsteps.size() - 1)
-				$footstep_sound.stream = walk_footsteps[num]
+				if SPEED != SPRINT_SPEED:
+					var num = rng.randi_range(0, walk_footsteps.size() - 1)
+					$footstep_sound.stream = walk_footsteps[num]
+				if SPEED == SPRINT_SPEED:
+					var num = rng.randi_range(0, sprint_footsteps.size() - 1)
+					$footstep_sound.stream = sprint_footsteps[num]
 				$footstep_sound.play()
 			velocity.x = direction.x * SPEED
 			velocity.z = direction.z * SPEED
