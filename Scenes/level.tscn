@@ -698,34 +698,36 @@ scary_painting = ExtResource("29_1cgv8")
 stare_time = 4.0
 scare_time = 1.0
 
-[node name="destination" type="Node3D" parent="." unique_id=1778222868]
+[node name="destinations" type="Node3D" parent="." unique_id=1465050326]
+
+[node name="destination" type="Node3D" parent="destinations" unique_id=1778222868]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3636584, 5.111405)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="destination" unique_id=86303185]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination" unique_id=86303185]
 mesh = SubResource("BoxMesh_luodc")
 
-[node name="destination4" type="Node3D" parent="." unique_id=976946743]
+[node name="destination4" type="Node3D" parent="destinations" unique_id=976946743]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.561716, 1.3636584, 25.911137)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="destination4" unique_id=33827764]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination4" unique_id=33827764]
 mesh = SubResource("BoxMesh_luodc")
 
-[node name="destination5" type="Node3D" parent="." unique_id=24884117]
+[node name="destination5" type="Node3D" parent="destinations" unique_id=24884117]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.621871, 1.3636584, 25.911137)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="destination5" unique_id=332703896]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination5" unique_id=332703896]
 mesh = SubResource("BoxMesh_luodc")
 
-[node name="destination2" type="Node3D" parent="." unique_id=1474285199]
+[node name="destination2" type="Node3D" parent="destinations" unique_id=1474285199]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4114332, 1.1829818, -9.342051)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="destination2" unique_id=1843574568]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination2" unique_id=1843574568]
 mesh = SubResource("BoxMesh_luodc")
 
-[node name="destination3" type="Node3D" parent="." unique_id=490122278]
+[node name="destination3" type="Node3D" parent="destinations" unique_id=490122278]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.234684, 1.1829818, -10.181466)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="destination3" unique_id=2096136627]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination3" unique_id=2096136627]
 mesh = SubResource("BoxMesh_luodc")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
