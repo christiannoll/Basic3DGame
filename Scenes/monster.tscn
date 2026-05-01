@@ -43,4 +43,5 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 collision_mask = 3
 script = ExtResource("4_ujuxu")
 
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="pick_new_destination"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="on_navigation_agent_3d_velocity_computed"]
