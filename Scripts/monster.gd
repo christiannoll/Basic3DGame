@@ -19,7 +19,7 @@ func _ready() -> void:
 	current_destination = destinations[rand_dest]
 	
 func pick_new_destination():
-	if chasing == false
+	if chasing == false:
 		var wait_time = rng.randf_range(3.0, 10.0)
 		await get_tree().create_timer(wait_time, false).timeout
 		var rand_dest = rng.randi(0, destinations.size() - 1)
