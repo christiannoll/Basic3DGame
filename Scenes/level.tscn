@@ -273,6 +273,8 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gf56v"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_luodc"]
+
 [node name="level" type="Node3D" unique_id=524820426]
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
@@ -695,6 +697,12 @@ painting_mat = ExtResource("28_luodc")
 scary_painting = ExtResource("29_1cgv8")
 stare_time = 4.0
 scare_time = 1.0
+
+[node name="destination" type="Node3D" parent="." unique_id=1778222868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3636584, 5.111405)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destination" unique_id=86303185]
+mesh = SubResource("BoxMesh_luodc")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
