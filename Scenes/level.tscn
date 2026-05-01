@@ -730,6 +730,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.234684, 1.1829818, -10.181
 [node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination3" unique_id=2096136627]
 mesh = SubResource("BoxMesh_luodc")
 
+[node name="destination6" type="Node3D" parent="destinations" unique_id=1150239426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.234684, 1.1829818, -22.59635)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination6" unique_id=2000435367]
+mesh = SubResource("BoxMesh_luodc")
+
+[node name="destination7" type="Node3D" parent="destinations" unique_id=1043002241]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8493137, 1.1829818, -29.38302)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination7" unique_id=1557079363]
+mesh = SubResource("BoxMesh_luodc")
+
+[node name="destination8" type="Node3D" parent="destinations" unique_id=568464061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.862414, 1.1829818, -18.615362)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="destinations/destination8" unique_id=634219103]
+mesh = SubResource("BoxMesh_luodc")
+
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
 [connection signal="body_entered" from="monster_spawner" to="monster_spawner" method="spawn_monster"]
