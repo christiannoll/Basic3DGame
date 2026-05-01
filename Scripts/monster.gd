@@ -6,10 +6,29 @@ var player
 var caught = false
 var distance: float
 @export var scene_name: String
+@export var destinations: Array[Node3D]
+var rng
+var current_destination
+var chasing = false
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready() -> void:
+	rng = RandomNumberGenerator.new()
 	player = get_node("/root/" + get_tree().current_scene.name + "/Player")
+	var rand_dest = rng.randi(0, destinations.size() - 1)
+	current_destination = destinations[rand_dest]
+	
+func pick_new_destination():
+	var wait_time = rng.randf_range(3.0, 10.0)
+	await get_tree().create_timer(wait_time, false).timeout
+	var rand_dest = rng.randi(0, destinations.size() - 1)
+	current_destination = destinations[rand_dest]
+	
+func _process(delta: float) -> void:
+	if chasing == false:
+		update_target_location(current_destination.global_transform.origin)
+	if chasing == true:
+		update_target_location(player.global_transform.origin)
 	
 func _physics_process(delta: float) -> void:
 	if visible:
@@ -21,16 +40,17 @@ func _physics_process(delta: float) -> void:
 		$NavigationAgent3D.set_velocity(new_velocity)
 		var look_dir = atan2(-velocity.x, -velocity.z)
 		rotation.y = look_dir
-		distance = player.global_transform.origin.distance_to(global_transform.origin)
-		if distance <= 2 && caught == false:
-			player.visible = false
-			if !$jumpscare.playing:
-				$jumpscare.play()
-			SPEED = 0
-			caught = true
-			$jumpscare_camera.current = true
-			await get_tree().create_timer(jumpscareTime, false).timeout
-			get_tree().change_scene_to_file("res://Scenes/" + scene_name + ".tscn")
+		if chasing == true:
+			distance = player.global_transform.origin.distance_to(global_transform.origin)
+			if distance <= 2 && caught == false:
+				player.visible = false
+				if !$jumpscare.playing:
+					$jumpscare.play()
+				SPEED = 0
+				caught = true
+				$jumpscare_camera.current = true
+				await get_tree().create_timer(jumpscareTime, false).timeout
+				get_tree().change_scene_to_file("res://Scenes/" + scene_name + ".tscn")
 			
 func update_target_location(target_location):
 	$NavigationAgent3D.target_position = target_location
