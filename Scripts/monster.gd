@@ -11,6 +11,7 @@ var rng
 var current_destination
 var chasing = false
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var able_to_pick = false
 
 func _ready() -> void:
 	rng = RandomNumberGenerator.new()
@@ -19,16 +20,22 @@ func _ready() -> void:
 	current_destination = destinations[rand_dest]
 	
 func pick_new_destination():
-	if chasing == false:
+	if chasing == false && able_to_pick == false && distance <= 1:
+		able_to_pick = true
 		var wait_time = rng.randf_range(3.0, 10.0)
 		await get_tree().create_timer(wait_time, false).timeout
-		var rand_dest = rng.randi_range(0, destinations.size() - 1)
-		current_destination = destinations[rand_dest]
+		if distance <= 1:
+			var rand_dest = rng.randi_range(0, destinations.size() - 1)
+			print(str(rand_dest))
+			current_destination = destinations[rand_dest]
+		able_to_pick = false
 	
 func _process(delta: float) -> void:
 	if chasing == false:
+		distance = current_destination.global_transform.origin.distance_to(global_transform.origin)
 		update_target_location(current_destination.global_transform.origin)
 	if chasing == true:
+		distance = player.global_transform.origin.distance_to(global_transform.origin)
 		update_target_location(player.global_transform.origin)
 	
 func _physics_process(delta: float) -> void:
@@ -42,7 +49,6 @@ func _physics_process(delta: float) -> void:
 		var look_dir = atan2(-velocity.x, -velocity.z)
 		rotation.y = look_dir
 		if chasing == true:
-			distance = player.global_transform.origin.distance_to(global_transform.origin)
 			if distance <= 2 && caught == false:
 				player.visible = false
 				if !$jumpscare.playing:
