@@ -15,14 +15,14 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 func _ready() -> void:
 	rng = RandomNumberGenerator.new()
 	player = get_node("/root/" + get_tree().current_scene.name + "/Player")
-	var rand_dest = rng.randi(0, destinations.size() - 1)
+	var rand_dest = rng.randi_range(0, destinations.size() - 1)
 	current_destination = destinations[rand_dest]
 	
 func pick_new_destination():
 	if chasing == false:
 		var wait_time = rng.randf_range(3.0, 10.0)
 		await get_tree().create_timer(wait_time, false).timeout
-		var rand_dest = rng.randi(0, destinations.size() - 1)
+		var rand_dest = rng.randi_range(0, destinations.size() - 1)
 		current_destination = destinations[rand_dest]
 	
 func _process(delta: float) -> void:
