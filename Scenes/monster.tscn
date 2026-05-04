@@ -44,7 +44,7 @@ collision_mask = 3
 script = ExtResource("4_ujuxu")
 
 [node name="RayCast3D2" type="RayCast3D" parent="." unique_id=550695987]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.51385146)
+transform = Transform3D(11.69, 0, 0, 0, -5.109861e-07, -11.69, 0, 11.69, -5.109861e-07, 0, 0.35267687, -0.51385146)
 collision_mask = 3
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="pick_new_destination"]
