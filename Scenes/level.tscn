@@ -683,13 +683,15 @@ monster = NodePath("../Monster")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="monster_spawner" unique_id=896686427]
 shape = SubResource("BoxShape3D_gf56v")
 
-[node name="battery" parent="." unique_id=240790748 instance=ExtResource("26_u0did")]
+[node name="Batteries" type="Node3D" parent="." unique_id=930546007]
+
+[node name="battery" parent="Batteries" unique_id=240790748 instance=ExtResource("26_u0did")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.30744767, 1.423861, -29.740225)
 
-[node name="battery2" parent="." unique_id=531274657 instance=ExtResource("26_u0did")]
+[node name="battery2" parent="Batteries" unique_id=531274657 instance=ExtResource("26_u0did")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.4880767, 1.4301941, -29.740225)
 
-[node name="battery3" parent="." unique_id=1599722839 instance=ExtResource("26_u0did")]
+[node name="battery3" parent="Batteries" unique_id=1599722839 instance=ExtResource("26_u0did")]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.6758592, 1.4287634, -29.740225)
 
 [node name="Painting" parent="." unique_id=1583656101 instance=ExtResource("27_53r2q")]
