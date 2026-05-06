@@ -12,6 +12,8 @@ var current_destination
 var chasing = false
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var able_to_pick = false
+@export var walk_footsteps: Array[AudioStream]
+@export var sprint_footsteps: Array[AudioStream]
 
 func _ready() -> void:
 	rng = RandomNumberGenerator.new()
@@ -31,10 +33,18 @@ func pick_new_destination():
 		able_to_pick = false
 	
 func _process(delta: float) -> void:
-	if chasing == false:
+	if chasing == false && SPEED > 0:
+		if !$footsteps.playing:
+			var num = rng.randi_range(0, walk_footsteps.size() - 1)
+			$footsteps.stream = walk_footsteps[num]
+			$footsteps.play()	
 		distance = current_destination.global_transform.origin.distance_to(global_transform.origin)
 		update_target_location(current_destination.global_transform.origin)
-	if chasing == true:
+	if chasing == true && SPEED > 0:
+		if !$footsteps.playing:
+			var num = rng.randi_range(0, sprint_footsteps.size() - 1)
+			$footsteps.stream = sprint_footsteps[num]
+			$footsteps.play()
 		distance = player.global_transform.origin.distance_to(global_transform.origin)
 		update_target_location(player.global_transform.origin)
 	
