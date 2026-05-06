@@ -49,5 +49,8 @@ transform = Transform3D(11.69, 0, 0, 0, -5.109861e-07, -11.69, 0, 11.69, -5.1098
 collision_mask = 3
 script = ExtResource("5_cyu0s")
 
+[node name="footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1639764916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72873104, 0)
+
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="pick_new_destination"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="on_navigation_agent_3d_velocity_computed"]
