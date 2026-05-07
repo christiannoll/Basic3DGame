@@ -2,9 +2,25 @@
 
 [ext_resource type="Script" uid="uid://crewy63hix5fl" path="res://Scripts/monster.gd" id="1_i44lo"]
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="1_xhoai"]
+[ext_resource type="AudioStream" uid="uid://dvdyd82274tgr" path="res://Sounds/Concrete-Footstep-1.mp3" id="2_g0mdy"]
 [ext_resource type="AudioStream" uid="uid://cudvrghhug2qa" path="res://Sounds/sudden-scare.mp3" id="3_hyvb2"]
+[ext_resource type="AudioStream" uid="uid://p75a5tadwn7m" path="res://Sounds/Concrete-Footstep-2.mp3" id="3_ppmea"]
+[ext_resource type="AudioStream" uid="uid://pv6oe4kvcjaq" path="res://Sounds/Concrete-Footstep-3.mp3" id="4_c2122"]
 [ext_resource type="Script" uid="uid://cyhhawvjc3rwd" path="res://Scripts/enemy_raycast.gd" id="4_ujuxu"]
+[ext_resource type="AudioStream" uid="uid://be2pxpxed3wux" path="res://Sounds/Concrete-Footstep-4.mp3" id="5_18b1t"]
 [ext_resource type="Script" uid="uid://cxwwoyrx7ehls" path="res://Scripts/chase_player.gd" id="5_cyu0s"]
+[ext_resource type="AudioStream" uid="uid://dnbbh04v7noln" path="res://Sounds/Concrete-Footstep-5.mp3" id="6_qo7mf"]
+[ext_resource type="AudioStream" uid="uid://dfdao4x76lhq8" path="res://Sounds/Concrete-Footstep-6.mp3" id="7_0hhrs"]
+[ext_resource type="AudioStream" uid="uid://blogh7ijn631r" path="res://Sounds/Concrete-Footstep-7.mp3" id="8_svie7"]
+[ext_resource type="AudioStream" uid="uid://td63ml6nf16l" path="res://Sounds/Concrete-Footstep-8.mp3" id="9_fd1b6"]
+[ext_resource type="AudioStream" uid="uid://cwk7mqq5r5q5j" path="res://Sounds/running-01.mp3" id="10_v4b24"]
+[ext_resource type="AudioStream" uid="uid://dc2f2cytr7pkk" path="res://Sounds/running-02.mp3" id="11_0ukfy"]
+[ext_resource type="AudioStream" uid="uid://bbw7irjas0uxy" path="res://Sounds/running-03.mp3" id="12_y32po"]
+[ext_resource type="AudioStream" uid="uid://tieycvt76bst" path="res://Sounds/running-04.mp3" id="13_k3d7l"]
+[ext_resource type="AudioStream" uid="uid://dndfu7mptfvw3" path="res://Sounds/running-05.mp3" id="14_tyr6x"]
+[ext_resource type="AudioStream" uid="uid://o2d7apegobyq" path="res://Sounds/running-06.mp3" id="15_qk58o"]
+[ext_resource type="AudioStream" uid="uid://c5stu3p8ya6vl" path="res://Sounds/running-07.mp3" id="16_dihro"]
+[ext_resource type="AudioStream" uid="uid://cm81y8jgiaodi" path="res://Sounds/running-08.mp3" id="17_d1lei"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rpp4a"]
 
@@ -13,6 +29,8 @@
 [node name="Monster" type="CharacterBody3D" unique_id=1678673141 groups=["monster"]]
 script = ExtResource("1_i44lo")
 scene_name = "death"
+walk_footsteps = Array[AudioStream]([ExtResource("2_g0mdy"), ExtResource("3_ppmea"), ExtResource("4_c2122"), ExtResource("5_18b1t"), ExtResource("6_qo7mf"), ExtResource("7_0hhrs"), ExtResource("8_svie7"), ExtResource("9_fd1b6")])
+sprint_footsteps = Array[AudioStream]([ExtResource("10_v4b24"), ExtResource("11_0ukfy"), ExtResource("12_y32po"), ExtResource("13_k3d7l"), ExtResource("14_tyr6x"), ExtResource("15_qk58o"), ExtResource("16_dihro"), ExtResource("17_d1lei")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1993513783]
 shape = SubResource("CapsuleShape3D_rpp4a")
