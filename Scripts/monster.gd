@@ -24,15 +24,21 @@ func _ready() -> void:
 func pick_new_destination():
 	if chasing == false && able_to_pick == false && distance <= 1:
 		able_to_pick = true
+		SPEED = 0
 		var wait_time = rng.randf_range(3.0, 10.0)
 		await get_tree().create_timer(wait_time, false).timeout
 		if distance <= 1:
 			var rand_dest = rng.randi_range(0, destinations.size() - 1)
 			print(str(rand_dest))
+			SPEED = 1
 			current_destination = destinations[rand_dest]
 		able_to_pick = false
 	
 func _process(delta: float) -> void:
+	if chasing == true && !$chase_music.playing:
+		$chase_music.play()
+	if chasing == false && $chase_music.playing:
+		$chase_music.stop() 
 	if chasing == false && SPEED > 0:
 		if !$footsteps.playing:
 			var num = rng.randi_range(0, walk_footsteps.size() - 1)

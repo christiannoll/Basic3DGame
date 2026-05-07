@@ -72,7 +72,7 @@ script = ExtResource("5_cyu0s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72873104, 0)
 max_distance = 20.0
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2065305110]
+[node name="chase_music" type="AudioStreamPlayer" parent="." unique_id=2065305110]
 stream = ExtResource("22_0ukfy")
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="pick_new_destination"]
