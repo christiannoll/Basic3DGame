@@ -21,6 +21,7 @@
 [ext_resource type="AudioStream" uid="uid://o2d7apegobyq" path="res://Sounds/running-06.mp3" id="15_qk58o"]
 [ext_resource type="AudioStream" uid="uid://c5stu3p8ya6vl" path="res://Sounds/running-07.mp3" id="16_dihro"]
 [ext_resource type="AudioStream" uid="uid://cm81y8jgiaodi" path="res://Sounds/running-08.mp3" id="17_d1lei"]
+[ext_resource type="AudioStream" uid="uid://u0rg103bdfo3" path="res://Sounds/run.mp3" id="22_0ukfy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rpp4a"]
 
@@ -70,6 +71,9 @@ script = ExtResource("5_cyu0s")
 [node name="footsteps" type="AudioStreamPlayer3D" parent="." unique_id=1639764916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72873104, 0)
 max_distance = 20.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2065305110]
+stream = ExtResource("22_0ukfy")
 
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="pick_new_destination"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="on_navigation_agent_3d_velocity_computed"]
