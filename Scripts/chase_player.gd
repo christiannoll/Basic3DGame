@@ -7,5 +7,5 @@ func _process(delta: float) -> void:
 		var hit = get_collider()
 		if hit.name == "Player" && !get_parent().chasing:
 			get_parent().chasing = true
-			get_parent().SPEED = 4.0
+			get_parent().SPEED = 2.5
 					
