@@ -5,6 +5,7 @@ var jumpscareTime = 2
 var player
 var caught = false
 var distance: float
+var player_distance: float
 @export var scene_name: String
 @export var destinations: Array[Node3D]
 var rng
@@ -27,7 +28,7 @@ func pick_new_destination():
 		SPEED = 0
 		var wait_time = rng.randf_range(3.0, 10.0)
 		await get_tree().create_timer(wait_time, false).timeout
-		if distance <= 1:
+		if distance <= 1 && chasing == false:
 			var rand_dest = rng.randi_range(0, destinations.size() - 1)
 			print(str(rand_dest))
 			SPEED = 1
@@ -51,8 +52,8 @@ func _process(delta: float) -> void:
 			var num = rng.randi_range(0, sprint_footsteps.size() - 1)
 			$footsteps.stream = sprint_footsteps[num]
 			$footsteps.play()
-		distance = player.global_transform.origin.distance_to(global_transform.origin)
 		update_target_location(player.global_transform.origin)
+	player_distance = player.global_transform.origin.distance_to(global_transform.origin)
 	
 func _physics_process(delta: float) -> void:
 	if visible:
@@ -65,7 +66,7 @@ func _physics_process(delta: float) -> void:
 		var look_dir = atan2(-velocity.x, -velocity.z)
 		rotation.y = look_dir
 		if chasing == true:
-			if distance <= 2 && caught == false:
+			if player_distance <= 2 && caught == false:
 				player.visible = false
 				if !$jumpscare.playing:
 					$jumpscare.play()
