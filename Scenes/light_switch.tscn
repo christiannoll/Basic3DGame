@@ -10,5 +10,5 @@
 shape = SubResource("BoxShape3D_mjrfg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=467428542]
-transform = Transform3D(0.32938892, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.2767805, 0, 0, 0, 0.36412978, 0, 0, 0, 0.15249367, 0, 0, 0)
 mesh = SubResource("BoxMesh_06m6k")
