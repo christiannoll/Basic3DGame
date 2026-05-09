@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b46ld7ywtj0rx"]
 
+[ext_resource type="Script" uid="uid://bdlsck8uwfq5l" path="res://Scripts/light_switch.gd" id="1_06m6k"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_mjrfg"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_06m6k"]
@@ -9,6 +11,7 @@ albedo_color = Color(0.972549, 0.050980393, 0.047058824, 1)
 roughness = 0.5
 
 [node name="light_switch" type="StaticBody3D" unique_id=528431731]
+script = ExtResource("1_06m6k")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1020001966]
 transform = Transform3D(0.26992354, 0, 0, 0, 0.35575035, 0, 0, 0, 0.16746764, 0, 0, 0)
