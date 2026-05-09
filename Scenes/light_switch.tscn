@@ -4,6 +4,10 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_06m6k"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjrfg"]
+albedo_color = Color(0.972549, 0.050980393, 0.047058824, 1)
+roughness = 0.5
+
 [node name="light_switch" type="StaticBody3D" unique_id=528431731]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1020001966]
@@ -12,4 +16,9 @@ shape = SubResource("BoxShape3D_mjrfg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=467428542]
 transform = Transform3D(0.2767805, 0, 0, 0, 0.36412978, 0, 0, 0, 0.15249367, 0, 0, 0)
+mesh = SubResource("BoxMesh_06m6k")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=850143124]
+transform = Transform3D(0.14665475, 0, 0, 0, 0.15703264, 0, 0, 0, 0.09809497, 0, 0, -0.08949876)
+material_override = SubResource("StandardMaterial3D_mjrfg")
 mesh = SubResource("BoxMesh_06m6k")
