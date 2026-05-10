@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://b08vp6u07xqro" path="res://Materials/wall2.tres" id="4_wqkje"]
 [ext_resource type="PackedScene" uid="uid://7hbvoevlg62r" path="res://Scenes/door.tscn" id="5_qxfql"]
 [ext_resource type="PackedScene" uid="uid://hpfjta44rurm" path="res://Scenes/light.tscn" id="6_0f350"]
+[ext_resource type="PackedScene" uid="uid://b46ld7ywtj0rx" path="res://Scenes/light_switch.tscn" id="6_1cgv8"]
 [ext_resource type="PackedScene" uid="uid://bjl3jv6rvfu2h" path="res://Scenes/table.tscn" id="7_8c0lf"]
 [ext_resource type="PackedScene" uid="uid://doiinythr3dgv" path="res://Scenes/flashlight.tscn" id="8_754fn"]
 [ext_resource type="AudioStream" uid="uid://benodiijv6apk" path="res://Sounds/ambience.mp3" id="9_bvt00"]
@@ -345,6 +346,9 @@ shape = SubResource("BoxShape3D_51e2h")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/wall6" unique_id=996794978]
 material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_tumq0")
+
+[node name="light_switch" parent="NavigationRegion3D/floors_and_walls/wall6" unique_id=528431731 instance=ExtResource("6_1cgv8")]
+transform = Transform3D(0.09999678, 0.0008028429, 0, -0.0016056858, 0.19999357, 0, 0, 0, 0.1, -0.59779465, -0.15210277, -0.5059091)
 
 [node name="wall16" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1365312566]
 transform = Transform3D(8.880067, -0.04017823, 0, 0.07129528, 5.0043335, 0, 0, 0, 10, 15.074113, 3.0780916, -19.89098)
