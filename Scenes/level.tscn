@@ -351,7 +351,7 @@ material_override = ExtResource("2_6phgx")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="light_switch" parent="NavigationRegion3D/floors_and_walls/wall6" unique_id=528431731 node_paths=PackedStringArray("light") instance=ExtResource("6_1cgv8")]
-transform = Transform3D(0.09999678, 0.0008028429, 0, -0.0016056858, 0.19999357, 0, 0, 0, 0.1, -0.59779465, -0.15210277, -0.5059091)
+transform = Transform3D(0.09999678, 0.0008028429, 0, -0.0016056858, 0.19999357, 0, 0, 0, 0.1, -0.5980629, -0.2189239, -0.5059091)
 light = NodePath("../../../../lights/light")
 light_off = SubResource("StandardMaterial3D_hcs0j")
 light_on = ExtResource("7_hcs0j")
