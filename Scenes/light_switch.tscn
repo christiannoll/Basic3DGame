@@ -10,6 +10,14 @@
 albedo_color = Color(0.972549, 0.050980393, 0.047058824, 1)
 roughness = 0.5
 
+[sub_resource type="Animation" id="Animation_06m6k"]
+resource_name = "press_button"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ysq76"]
+_data = {
+&"press_button": SubResource("Animation_06m6k")
+}
+
 [node name="light_switch" type="StaticBody3D" unique_id=528431731]
 script = ExtResource("1_06m6k")
 
@@ -25,3 +33,6 @@ mesh = SubResource("BoxMesh_06m6k")
 transform = Transform3D(0.14665475, 0, 0, 0, 0.15703264, 0, 0, 0, 0.09809497, 0, 0, -0.08949876)
 material_override = SubResource("StandardMaterial3D_mjrfg")
 mesh = SubResource("BoxMesh_06m6k")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=53145292]
+libraries/ = SubResource("AnimationLibrary_ysq76")
