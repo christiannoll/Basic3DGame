@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://bdlsck8uwfq5l" path="res://Scripts/light_switch.gd" id="1_06m6k"]
 [ext_resource type="AudioStream" uid="uid://dy5jp3508y8n7" path="res://Sounds/press.mp3" id="2_ysq76"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mjrfg"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_06m6k"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mjrfg"]
@@ -48,12 +46,11 @@ _data = {
 &"press_button": SubResource("Animation_06m6k")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ysq76"]
+size = Vector3(0.42193604, 1, 1)
+
 [node name="light_switch" type="StaticBody3D" unique_id=528431731]
 script = ExtResource("1_06m6k")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1020001966]
-transform = Transform3D(0.27130306, 0, 0, 0, 0.35575035, 0, 0, 0, 0.21266949, 0, 0, -0.038344055)
-shape = SubResource("BoxShape3D_mjrfg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=467428542]
 transform = Transform3D(0.2767805, 0, 0, 0, 0.36412978, 0, 0, 0, 0.15249367, 0, 0, 0)
@@ -70,3 +67,7 @@ libraries/ = SubResource("AnimationLibrary_ysq76")
 [node name="press" type="AudioStreamPlayer3D" parent="." unique_id=1514416182]
 stream = ExtResource("2_ysq76")
 max_distance = 15.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=639373474]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28903198, 0, 0.20791337)
+shape = SubResource("BoxShape3D_ysq76")
