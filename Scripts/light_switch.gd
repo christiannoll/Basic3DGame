@@ -9,6 +9,7 @@ var interactable = true
 func toggle_switch():
 	if interactable:
 		interactable = false
+		$press.play()
 		$AnimationPlayer.play("press_button")
 		toggle = !toggle
 		if toggle == false:
