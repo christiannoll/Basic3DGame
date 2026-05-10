@@ -6,7 +6,7 @@ extends StaticBody3D
 var toggle = false
 var interactable = true
 
-func toggle_switch():
+func interact():
 	if interactable:
 		interactable = false
 		$press.play()
