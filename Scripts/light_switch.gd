@@ -3,7 +3,7 @@ extends StaticBody3D
 @export var light: Node3D
 @export var light_off: StandardMaterial3D
 @export var light_on: StandardMaterial3D
-var toggle = false
+@export var toggle = false
 var interactable = true
 
 func interact():

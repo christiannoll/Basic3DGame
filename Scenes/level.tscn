@@ -768,6 +768,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6576478, 1.9354008, -24.87
 light = NodePath("../lights/light4")
 light_off = SubResource("StandardMaterial3D_hcs0j")
 light_on = ExtResource("7_hcs0j")
+toggle = true
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
