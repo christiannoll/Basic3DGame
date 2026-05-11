@@ -12,3 +12,7 @@ shape = SubResource("BoxShape3D_4ome6")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=90665582]
 transform = Transform3D(0.8082609, 0.2644052, -0.52612203, -0.48882914, 0.7994373, -0.34920812, 0.32826912, 0.539435, 0.7754029, 0, 0, 0)
 mesh = SubResource("BoxMesh_4ome6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=469459628]
+transform = Transform3D(0.8535509, 0.5210097, 0, -0.5210097, 0.8535509, 0, 0, 0, 1.0000001, 0, 0, 0)
+mesh = SubResource("BoxMesh_4ome6")
