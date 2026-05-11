@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bw0y0b3klt5se"]
 
+[ext_resource type="Script" uid="uid://cpggwl6fpjyk4" path="res://Scripts/object.gd" id="1_ufb5h"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ome6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ome6"]
@@ -9,6 +11,7 @@ albedo_color = Color(1, 0.19215687, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_4ome6"]
 
 [node name="Object" type="StaticBody3D" unique_id=1694144766]
+script = ExtResource("1_ufb5h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=748381989]
 shape = SubResource("BoxShape3D_4ome6")
