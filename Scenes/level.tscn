@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://xmdo80gtwcuh" path="res://Scenes/painting.tscn" id="27_53r2q"]
 [ext_resource type="Material" uid="uid://cwewsb21mrioe" path="res://Materials/painting.tres" id="28_luodc"]
 [ext_resource type="Material" uid="uid://d383h53nlvskc" path="res://Materials/scare_painting.tres" id="29_1cgv8"]
+[ext_resource type="PackedScene" uid="uid://bw0y0b3klt5se" path="res://Scenes/object.tscn" id="31_t205d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -769,6 +770,9 @@ light = NodePath("../lights/light4")
 light_off = SubResource("StandardMaterial3D_hcs0j")
 light_on = ExtResource("7_hcs0j")
 toggle = true
+
+[node name="Object" parent="." unique_id=1694144766 instance=ExtResource("31_t205d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8562284, 0.8177569, -25.381851)
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
