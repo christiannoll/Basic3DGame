@@ -777,6 +777,9 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8562284, 0.8177569, 
 [node name="Object2" parent="." unique_id=2001966407 instance=ExtResource("31_t205d")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5264168, 0.82590413, 6.7241697)
 
+[node name="Object3" parent="." unique_id=121897705 instance=ExtResource("31_t205d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.512955, 0.8066633, 32.096157)
+
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
 [connection signal="body_entered" from="monster_spawner" to="monster_spawner" method="spawn_monster"]
