@@ -36,6 +36,15 @@ offset_bottom = 101.0
 theme_override_font_sizes/normal_font_size = 20
 text = "[E] Interact"
 
+[node name="object_counter" type="RichTextLabel" parent="." unique_id=1726283707]
+layout_mode = 0
+offset_left = 1095.0
+offset_top = 11.0
+offset_right = 1206.0
+offset_bottom = 96.0
+theme_override_font_sizes/normal_font_size = 20
+text = "0/3"
+
 [node name="paper" type="TextureRect" parent="." unique_id=253885253]
 visible = false
 layout_mode = 0
