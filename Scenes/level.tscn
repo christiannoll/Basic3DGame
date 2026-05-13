@@ -620,6 +620,15 @@ min_flash_time = 6.0
 max_flash_time = 15.0
 loop_flashing = true
 
+[node name="light5" parent="lights" unique_id=2026565792 instance=ExtResource("6_0f350")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010229826, 5.52642, 44.70217)
+flash_lights_at_rand = true
+min_time = 4.0
+max_time = 15.0
+min_flash_time = 6.0
+max_flash_time = 15.0
+loop_flashing = true
+
 [node name="Flashlight" parent="." unique_id=360502918 instance=ExtResource("8_754fn")]
 transform = Transform3D(-0.19946289, -0.0017850988, -0.014538462, 0, 0.19850923, -0.02437387, 0.014647643, -0.024308411, -0.19797613, -0.5731386, 1.4033139, -30.949368)
 
