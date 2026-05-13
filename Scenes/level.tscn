@@ -332,9 +332,18 @@ shape = SubResource("BoxShape3D_51e2h")
 material_override = ExtResource("2_81xng")
 mesh = SubResource("BoxMesh_tumq0")
 
+[node name="ceiling2" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1130572542]
+transform = Transform3D(7.477625, 0, 0, 0, 1, 0, 0, 0, 15.916117, 0.6049242, 6.01575, 41.127995)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/ceiling2" unique_id=1985081392]
+shape = SubResource("BoxShape3D_51e2h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/ceiling2" unique_id=1233437098]
+material_override = ExtResource("2_81xng")
+mesh = SubResource("BoxMesh_tumq0")
+
 [node name="ceiling" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=1051115234]
 transform = Transform3D(42.629066, 0, 0, 0, 1, 0, 0, 0, 69.39393, 0, 6.0947495, 0)
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/ceiling" unique_id=1995709826]
 shape = SubResource("BoxShape3D_51e2h")
