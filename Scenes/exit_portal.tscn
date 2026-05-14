@@ -12,6 +12,7 @@ size = Vector3(2.9970703, 4.010315, 2.4267578)
 
 [node name="Exit_portal" type="Area3D" unique_id=1394935780]
 script = ExtResource("1_4xhc3")
+scene_name = "victory"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1458525884]
 transform = Transform3D(3, 0, 0, 0, 4, 0, 0, 0, 1, 0, 0, 0)
