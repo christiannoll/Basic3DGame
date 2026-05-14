@@ -16,6 +16,18 @@ color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1922438615]
 layout_mode = 0
-offset_right = 784.0
-offset_bottom = 265.0
+offset_left = 278.0
+offset_top = 227.0
+offset_right = 1062.0
+offset_bottom = 492.0
+theme_override_font_sizes/normal_font_size = 80
 text = "YOU SURVIVED!"
+
+[node name="Button" type="Button" parent="." unique_id=1778510411]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 459.0
+offset_right = 682.0
+offset_bottom = 521.0
+theme_override_font_sizes/font_size = 30
+text = "MAIN MENU"
