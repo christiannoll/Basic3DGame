@@ -7,6 +7,7 @@ func _ready() -> void:
 
 func interact():
 	get_parent().num_of_objects += 1
+	get_tree().current_scene.get_node("/Sounds/obj_pickup").play()
 	object_counter.text = str(get_parent().num_of_objects) + "/3"
 	if get_parent().num_of_objects >= 3:
 		get_tree().current_scene.get_node("hallway_door/AnimationPlayer").play("open")
