@@ -33,6 +33,7 @@
 [ext_resource type="Material" uid="uid://d383h53nlvskc" path="res://Materials/scare_painting.tres" id="29_1cgv8"]
 [ext_resource type="Script" uid="uid://dunx85683dtir" path="res://Scripts/Object_counter.gd" id="31_idpk0"]
 [ext_resource type="PackedScene" uid="uid://bw0y0b3klt5se" path="res://Scenes/object.tscn" id="31_t205d"]
+[ext_resource type="PackedScene" uid="uid://c3hc70wvgc0if" path="res://Scenes/exit_portal.tscn" id="34_ais7f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_51e2h"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -902,6 +903,9 @@ mesh = SubResource("BoxMesh_tumq0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="hallway_door" unique_id=1114043629]
 libraries/ = SubResource("AnimationLibrary_ais7f")
+
+[node name="Exit_portal" parent="." unique_id=1394935780 instance=ExtResource("34_ais7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5866581, 2.5601947, 48.726532)
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
