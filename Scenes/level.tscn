@@ -59,42 +59,6 @@ agent_radius = 0.25
 
 [sub_resource type="BoxMesh" id="BoxMesh_tumq0"]
 
-[sub_resource type="Animation" id="Animation_ais7f"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.84248734, 3.0780916, 33.489063)]
-}
-
-[sub_resource type="Animation" id="Animation_dw52x"]
-resource_name = "open"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0.84248734, 3.0780916, 33.489063), Vector3(4.414695, 3.0780916, 33.489063)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ais7f"]
-_data = {
-&"RESET": SubResource("Animation_ais7f"),
-&"open": SubResource("Animation_dw52x")
-}
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxfql"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ha31o"]
@@ -318,6 +282,42 @@ _data = {
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcs0j"]
 
+[sub_resource type="Animation" id="Animation_ais7f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.84248734, 3.0780916, 33.489063)]
+}
+
+[sub_resource type="Animation" id="Animation_dw52x"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.84248734, 3.0780916, 33.489063), Vector3(4.414695, 3.0780916, 33.489063)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ais7f"]
+_data = {
+&"RESET": SubResource("Animation_ais7f"),
+&"open": SubResource("Animation_dw52x")
+}
+
 [node name="level" type="Node3D" unique_id=524820426]
 
 [node name="UI" parent="." unique_id=133724784 instance=ExtResource("1_k5f4k")]
@@ -468,19 +468,6 @@ shape = SubResource("BoxShape3D_51e2h")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/wall5" unique_id=1304383786]
 material_override = ExtResource("4_wqkje")
 mesh = SubResource("BoxMesh_tumq0")
-
-[node name="hallway_door" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=824309914]
-transform = Transform3D(3.8744767, 0.00052364916, 0, -0.00040573577, 5.000463, 0, 0, 0, 0.85100675, 0.84248734, 3.0780916, 33.489063)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floors_and_walls/hallway_door" unique_id=908032751]
-shape = SubResource("BoxShape3D_51e2h")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/hallway_door" unique_id=1081451348]
-material_override = ExtResource("7_dw52x")
-mesh = SubResource("BoxMesh_tumq0")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/floors_and_walls/hallway_door" unique_id=1114043629]
-libraries/ = SubResource("AnimationLibrary_ais7f")
 
 [node name="wall20" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=752904571]
 transform = Transform3D(13.233505, 0.00052367826, 0, -0.0013858146, 5.0007405, 0, 0, 0, 2.257589, 0.7916317, 3.0780916, 49.584435)
@@ -902,6 +889,19 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5264168, 0.82590413, 
 
 [node name="Object3" parent="Important_objects" unique_id=121897705 instance=ExtResource("31_t205d")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.512955, 0.8066633, 32.096157)
+
+[node name="hallway_door" type="StaticBody3D" parent="." unique_id=824309914]
+transform = Transform3D(3.8744767, 0.00052364916, 0, -0.00040573577, 5.000463, 0, 0, 0, 0.85100675, 0.84248734, 3.0780916, 33.489063)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hallway_door" unique_id=908032751]
+shape = SubResource("BoxShape3D_51e2h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="hallway_door" unique_id=1081451348]
+material_override = ExtResource("7_dw52x")
+mesh = SubResource("BoxMesh_tumq0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hallway_door" unique_id=1114043629]
+libraries/ = SubResource("AnimationLibrary_ais7f")
 
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger" to="Scare_Trigger/scare_trigger" method="trigger_entered"]
 [connection signal="body_entered" from="Scare_Trigger/scare_trigger2" to="Scare_Trigger/scare_trigger2" method="trigger_entered"]
