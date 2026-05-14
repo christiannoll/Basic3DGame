@@ -888,6 +888,12 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7.8562284, 0.8177569, 
 [node name="Object2" parent="Important_objects" unique_id=2001966407 instance=ExtResource("31_t205d")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.5264168, 0.82590413, 6.7241697)
 
+[node name="Object5" parent="Important_objects" unique_id=248227365 instance=ExtResource("31_t205d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 18.085346, 0.82590413, -25.447712)
+
+[node name="Object4" parent="Important_objects" unique_id=1781574828 instance=ExtResource("31_t205d")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -10.596936, 0.82590413, -32.008682)
+
 [node name="Object3" parent="Important_objects" unique_id=121897705 instance=ExtResource("31_t205d")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.512955, 0.8066633, 32.096157)
 

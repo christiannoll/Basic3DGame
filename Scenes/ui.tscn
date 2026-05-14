@@ -43,7 +43,7 @@ offset_top = 11.0
 offset_right = 1206.0
 offset_bottom = 96.0
 theme_override_font_sizes/normal_font_size = 20
-text = "0/3"
+text = "0/5"
 
 [node name="paper" type="TextureRect" parent="." unique_id=253885253]
 visible = false
