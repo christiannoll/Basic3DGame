@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://hpfjta44rurm" path="res://Scenes/light.tscn" id="6_0f350"]
 [ext_resource type="PackedScene" uid="uid://b46ld7ywtj0rx" path="res://Scenes/light_switch.tscn" id="6_1cgv8"]
 [ext_resource type="PackedScene" uid="uid://bjl3jv6rvfu2h" path="res://Scenes/table.tscn" id="7_8c0lf"]
+[ext_resource type="Material" uid="uid://cuo1j7epavklg" path="res://Materials/flashlight.tres" id="7_dw52x"]
 [ext_resource type="Material" uid="uid://cighiohd5f6re" path="res://Materials/ light.tres" id="7_hcs0j"]
 [ext_resource type="PackedScene" uid="uid://doiinythr3dgv" path="res://Scenes/flashlight.tscn" id="8_754fn"]
 [ext_resource type="AudioStream" uid="uid://benodiijv6apk" path="res://Sounds/ambience.mp3" id="9_bvt00"]
@@ -439,7 +440,7 @@ transform = Transform3D(3.8744767, 0.00052364916, 0, -0.00040573577, 5.000463, 0
 shape = SubResource("BoxShape3D_51e2h")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/hallway_door" unique_id=1081451348]
-material_override = ExtResource("4_wqkje")
+material_override = ExtResource("7_dw52x")
 mesh = SubResource("BoxMesh_tumq0")
 
 [node name="wall20" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=752904571]
