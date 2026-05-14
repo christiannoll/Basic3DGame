@@ -3,7 +3,7 @@ extends SpotLight3D
 var picked_up = false
 var flashlight_ui
 var flashlight_energy
-var drain_rate = 0.00005
+var drain_rate = 0.04
 
 func _ready() -> void:
 	flashlight_ui = get_node("/root/" + get_tree().current_scene.name + "/UI/flashlight_stuff")
