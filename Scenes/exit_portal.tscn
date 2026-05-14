@@ -22,3 +22,5 @@ mesh = SubResource("BoxMesh_lo032")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1001912019]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0014648438, -0.015777588, -0.017333984)
 shape = SubResource("BoxShape3D_lo032")
+
+[connection signal="body_entered" from="." to="." method="enter_trigger"]
