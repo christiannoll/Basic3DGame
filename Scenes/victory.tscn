@@ -8,7 +8,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1264385387]
+[node name="bg" type="ColorRect" parent="." unique_id=1264385387]
 layout_mode = 0
 offset_right = 1148.0
 offset_bottom = 645.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1922438615]
+layout_mode = 0
+offset_right = 784.0
+offset_bottom = 265.0
+text = "YOU SURVIVED!"
