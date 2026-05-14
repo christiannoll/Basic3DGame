@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dmvlaoa0wxyi0"]
 
+[ext_resource type="Script" uid="uid://4cxsr3xad0" path="res://Scripts/victory.gd" id="1_1fp7o"]
+
 [node name="Victory" type="Control" unique_id=119410999]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1fp7o")
 
 [node name="bg" type="ColorRect" parent="." unique_id=1264385387]
 layout_mode = 0
@@ -31,3 +34,5 @@ offset_right = 682.0
 offset_bottom = 521.0
 theme_override_font_sizes/font_size = 30
 text = "MAIN MENU"
+
+[connection signal="pressed" from="Button" to="." method="to_menu"]
