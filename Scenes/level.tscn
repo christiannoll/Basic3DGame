@@ -59,6 +59,14 @@ agent_radius = 0.25
 
 [sub_resource type="BoxMesh" id="BoxMesh_tumq0"]
 
+[sub_resource type="Animation" id="Animation_dw52x"]
+resource_name = "open"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ais7f"]
+_data = {
+&"open": SubResource("Animation_dw52x")
+}
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxfql"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ha31o"]
@@ -442,6 +450,9 @@ shape = SubResource("BoxShape3D_51e2h")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floors_and_walls/hallway_door" unique_id=1081451348]
 material_override = ExtResource("7_dw52x")
 mesh = SubResource("BoxMesh_tumq0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NavigationRegion3D/floors_and_walls/hallway_door" unique_id=1114043629]
+libraries/ = SubResource("AnimationLibrary_ais7f")
 
 [node name="wall20" type="StaticBody3D" parent="NavigationRegion3D/floors_and_walls" unique_id=752904571]
 transform = Transform3D(13.233505, 0.00052367826, 0, -0.0013858146, 5.0007405, 0, 0, 0, 2.257589, 0.7916317, 3.0780916, 49.584435)
